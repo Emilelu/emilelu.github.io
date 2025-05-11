@@ -1,0 +1,611 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>敬語 - Bunpō Notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../foreword.html">引言</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 第一章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/00-A-hinshi.html"><strong aria-hidden="true">1.1.</strong> 品詞</a></li><li class="chapter-item expanded "><a href="../content/01-meishi.html"><strong aria-hidden="true">1.2.</strong> 名詞</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> 代名詞</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/02-shijishi-1.html"><strong aria-hidden="true">1.3.1.</strong> 指示詞　Ⅰ</a></li><li class="chapter-item expanded "><a href="../content/03-ninshoudaimeishi.html"><strong aria-hidden="true">1.3.2.</strong> 人称代名詞</a></li></ol></li><li class="chapter-item expanded "><a href="../content/04-keiyoushi-keiyoudoushi.html"><strong aria-hidden="true">1.4.</strong> 形容詞、形容動詞</a></li><li class="chapter-item expanded "><a href="../content/05-doushi-no-kouzou-to-bunrui.html"><strong aria-hidden="true">1.5.</strong> 動詞の構造と分類</a></li><li class="chapter-item expanded "><a href="../content/06-07-kakujoshi.html"><strong aria-hidden="true">1.6.</strong> 格助詞</a></li><li class="chapter-item expanded "><a href="../content/08-doushi-no-mizenkei.html"><strong aria-hidden="true">1.7.</strong> 動詞の未然形とその使い方</a></li><li class="chapter-item expanded "><a href="../content/09-doushi-no-rennyoukei.html"><strong aria-hidden="true">1.8.</strong> 動詞の連用形とその使い方</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 第二章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/10-tense-and-aspect-1.html"><strong aria-hidden="true">2.1.</strong> テンスとアスペクト　Ⅰ</a></li><li class="chapter-item expanded "><a href="../content/11-12-fukujoshi.html"><strong aria-hidden="true">2.2.</strong> 副助詞　Ⅰ</a></li><li class="chapter-item expanded "><a href="../content/13-hojodoushi.html"><strong aria-hidden="true">2.3.</strong> 補助動詞</a></li><li class="chapter-item expanded "><a href="../content/14-jujuhyougen.html"><strong aria-hidden="true">2.4.</strong> 授受表現</a></li><li class="chapter-item expanded "><a href="../content/15-shuujoshi.html"><strong aria-hidden="true">2.5.</strong> 終助詞</a></li><li class="chapter-item expanded "><a href="../content/16-bun-no-kouzou.html"><strong aria-hidden="true">2.6.</strong> 文の構造</a></li><li class="chapter-item expanded "><a href="../content/17-rentaishuushi-to-renyoushuushi.html"><strong aria-hidden="true">2.7.</strong> 連体修飾と連用修飾</a></li><li class="chapter-item expanded "><a href="../content/18-suiryou.html"><strong aria-hidden="true">2.8.</strong> 推量</a></li><li class="chapter-item expanded "><a href="../content/19-youtai-denbun-suitei-hikyou.html"><strong aria-hidden="true">2.9.</strong> 様態・伝聞・推定・比況</a></li><li class="chapter-item expanded "><a href="../content/20-kanjou-keiyoushi-keiyoudoushi-kibou.html"><strong aria-hidden="true">2.10.</strong> 感情形容詞・形容動詞、希望</a></li><li class="chapter-item expanded "><a href="../content/21-tsukaikatani-chuuisubeki-yougenn.html"><strong aria-hidden="true">2.11.</strong> 使い方に注意すべき用言</a></li><li class="chapter-item expanded "><a href="../content/22-setsuzokujoshi.html"><strong aria-hidden="true">2.12.</strong> 接続助詞</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/22-junnsetsu.html"><strong aria-hidden="true">2.12.1.</strong> 順接</a></li><li class="chapter-item expanded "><a href="../content/23-gyakusetsu.html"><strong aria-hidden="true">2.12.2.</strong> 逆接</a></li><li class="chapter-item expanded "><a href="../content/24-heiritsu.html"><strong aria-hidden="true">2.12.3.</strong> 並立</a></li><li class="chapter-item expanded "><a href="../content/24-ippanjouken.html"><strong aria-hidden="true">2.12.4.</strong> 一般条件</a></li><li class="chapter-item expanded "><a href="../content/24-tannjunnsetsuzoku.html"><strong aria-hidden="true">2.12.5.</strong> 単純接続</a></li><li class="chapter-item expanded "><a href="../content/25-sonohoka.html"><strong aria-hidden="true">2.12.6.</strong> その他</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 第三章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/26-bunpouka.html"><strong aria-hidden="true">3.1.</strong> 文法化</a></li><li class="chapter-item expanded "><a href="../content/26-keishikitaigen.html"><strong aria-hidden="true">3.2.</strong> 形式体言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/27-28-no-koto.html"><strong aria-hidden="true">3.2.1.</strong> の、こと</a></li><li class="chapter-item expanded "><a href="../content/29-30-mono.html"><strong aria-hidden="true">3.2.2.</strong> もの</a></li><li class="chapter-item expanded "><a href="../content/31-toki-tokoro.html"><strong aria-hidden="true">3.2.3.</strong> とき、ところ</a></li><li class="chapter-item expanded "><a href="../content/32-tame-you.html"><strong aria-hidden="true">3.2.4.</strong> ため、よう</a></li><li class="chapter-item expanded "><a href="../content/33-wake-hazu.html"><strong aria-hidden="true">3.2.5.</strong> わけ、はず</a></li><li class="chapter-item expanded "><a href="../content/34-mama-okage-sei.html"><strong aria-hidden="true">3.2.6.</strong> まま、おかげ、せい</a></li><li class="chapter-item expanded "><a href="../content/35-hou-tsumori-toori.html"><strong aria-hidden="true">3.2.7.</strong> ほう、つもり、とおり</a></li><li class="chapter-item expanded "><a href="../content/36-kuse-tabi-wari-kawari.html"><strong aria-hidden="true">3.2.8.</strong> くせ、たび、わり、かわり</a></li><li class="chapter-item expanded "><a href="../content/37-uchi-moto-ikan.html"><strong aria-hidden="true">3.2.9.</strong> うち、もと、いかん</a></li><li class="chapter-item expanded "><a href="../content/38-yue-jou-ijou-sai.html"><strong aria-hidden="true">3.2.10.</strong> ゆえ、上・以上、際</a></li><li class="chapter-item expanded "><a href="../content/39-totan-kiri-kagiri-baai.html"><strong aria-hidden="true">3.2.11.</strong> とたん、切り、限り、場合</a></li><li class="chapter-item expanded "><a href="../content/40-ippou-kekka-sue-ageku-saigo-shimatsu.html"><strong aria-hidden="true">3.2.12.</strong> 一方、結果、末、あげく、最後、始末</a></li><li class="chapter-item expanded "><a href="../content/41-kikkake-chigai-aida-kirai-osore.html"><strong aria-hidden="true">3.2.13.</strong> きっかけ、違い、間、きらい、恐れ</a></li><li class="chapter-item expanded "><a href="../content/42-shidai-kimi-furi-yoso-yogi.html"><strong aria-hidden="true">3.2.14.</strong> 次第、気味、ふり、よそ、余儀</a></li><li class="chapter-item expanded "><a href="../content/43-muki-muke-hanmen-hantai-hajime.html"><strong aria-hidden="true">3.2.15.</strong> 向き・向け、反面、反対、はじめ</a></li><li class="chapter-item expanded "><a href="../content/44-irai-kai-nuki-betsu-soba.html"><strong aria-hidden="true">3.2.16.</strong> 以来、甲斐、抜き、別、そば</a></li><li class="chapter-item expanded "><a href="../content/44-katawara-kawakiri-kidori-temae-hazumi-hyoushi.html"><strong aria-hidden="true">3.2.17.</strong> 傍ら、皮切り、きどり、手前、弾み・拍子</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 第四章</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> モダリティ</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/45-meidai-to-modality.html"><strong aria-hidden="true">4.1.1.</strong> 命題とモダリティ</a></li><li class="chapter-item expanded "><a href="../content/46-hyougen-ruikei.html"><strong aria-hidden="true">4.1.2.</strong> 表現類型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/47-hyouka.html"><strong aria-hidden="true">4.1.2.1.</strong> 評価</a></li><li class="chapter-item expanded "><a href="../content/48-ninshiki.html"><strong aria-hidden="true">4.1.2.2.</strong> 認識</a></li><li class="chapter-item expanded "><a href="../content/49-setsumei.html"><strong aria-hidden="true">4.1.2.3.</strong> 説明</a></li><li class="chapter-item expanded "><a href="../content/50-dentatsu.html"><strong aria-hidden="true">4.1.2.4.</strong> 伝達</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 言語使用域</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/61-jyoukyou-no-context-no-bunrui.html"><strong aria-hidden="true">4.2.1.</strong> 状況のコンテクストの分類</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.2.</strong> 役割関係</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/62-63-keigo.html" class="active"><strong aria-hidden="true">4.2.2.1.</strong> 敬語</a></li><li class="chapter-item expanded "><a href="../content/64-mainasu-no-taiguu.html"><strong aria-hidden="true">4.2.2.2.</strong> マイナスの待遇</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.3.</strong> 伝達様式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/65-hanashikotoba.html"><strong aria-hidden="true">4.2.3.1.</strong> 話し言葉</a></li><li class="chapter-item expanded "><a href="../content/66-kakikotoba.html"><strong aria-hidden="true">4.2.3.2.</strong> 書き言葉</a></li></ol></li><li class="chapter-item expanded "><a href="../content/67-yakuwarigo.html"><strong aria-hidden="true">4.2.4.</strong> 役割語</a></li></ol></li><li class="chapter-item expanded "><a href="../content/51-hiteihyougen-no-kakujuu.html"><strong aria-hidden="true">4.3.</strong> 否定表現の拡充</a></li><li class="chapter-item expanded "><a href="../content/52-shiekiukemi-jihatsu.html"><strong aria-hidden="true">4.4.</strong> 使役受身、自発</a></li><li class="chapter-item expanded "><a href="../content/53-tense-and-aspect-2.html"><strong aria-hidden="true">4.5.</strong> テンスとアスペクト　Ⅱ</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> 第五章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/54-fukugou-kakujoshi.html"><strong aria-hidden="true">5.1.</strong> 複合格助詞</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/54-taishou.html"><strong aria-hidden="true">5.1.1.</strong> 対象</a></li><li class="chapter-item expanded "><a href="../content/55-shudan-gennin.html"><strong aria-hidden="true">5.1.2.</strong> 手段、原因</a></li><li class="chapter-item expanded "><a href="../content/56-jouhougen-kijun.html"><strong aria-hidden="true">5.1.3.</strong> 情報源、基準</a></li><li class="chapter-item expanded "><a href="../content/56-shikaku-tachiba.html"><strong aria-hidden="true">5.1.4.</strong> 資格、立場</a></li><li class="chapter-item expanded "><a href="../content/57-59-joukyou.html"><strong aria-hidden="true">5.1.5.</strong> 状況</a></li><li class="chapter-item expanded "><a href="../content/60-kanzenni-bunpouka-sareteinai-koumoku.html"><strong aria-hidden="true">5.1.6.</strong> 完全に文法化されていない項目</a></li><li class="chapter-item expanded "><a href="../content/60-sonohoka.html"><strong aria-hidden="true">5.1.7.</strong> その他</a></li></ol></li><li class="chapter-item expanded "><a href="../content/70-fukugou-fukujoshi.html"><strong aria-hidden="true">5.2.</strong> 複合副助詞</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/70-shudai.html"><strong aria-hidden="true">5.2.1.</strong> 主題</a></li><li class="chapter-item expanded "><a href="../content/71-gentei.html"><strong aria-hidden="true">5.2.2.</strong> 限定</a></li><li class="chapter-item expanded "><a href="../content/72-tsukekuwae.html"><strong aria-hidden="true">5.2.3.</strong> 付け加え</a></li><li class="chapter-item expanded "><a href="../content/73-kanten.html"><strong aria-hidden="true">5.2.4.</strong> 観点</a></li></ol></li><li class="chapter-item expanded "><a href="../content/75-fukugou-setsuzokujoshi.html"><strong aria-hidden="true">5.3.</strong> 複合接続助詞</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/75-jouken.html"><strong aria-hidden="true">5.3.1.</strong> 条件</a></li><li class="chapter-item expanded "><a href="../content/76-riyuu.html"><strong aria-hidden="true">5.3.2.</strong> 理由</a></li><li class="chapter-item expanded "><a href="../content/76-mokuteki.html"><strong aria-hidden="true">5.3.3.</strong> 目的</a></li><li class="chapter-item expanded "><a href="../content/77-gyakusetsu.html"><strong aria-hidden="true">5.3.4.</strong> 逆接</a></li><li class="chapter-item expanded "><a href="../content/78-taihi.html"><strong aria-hidden="true">5.3.5.</strong> 対比</a></li><li class="chapter-item expanded "><a href="../content/78-futaijoukyou.html"><strong aria-hidden="true">5.3.6.</strong> 付帯状況</a></li><li class="chapter-item expanded "><a href="../content/79-soukankankei.html"><strong aria-hidden="true">5.3.7.</strong> 相関関係</a></li><li class="chapter-item expanded "><a href="../content/80-jikan.html"><strong aria-hidden="true">5.3.8.</strong> 時間</a></li></ol></li><li class="chapter-item expanded "><a href="../content/69-tense-and-aspect-3.html"><strong aria-hidden="true">5.4.</strong> テンスとアスペクト　Ⅲ</a></li><li class="chapter-item expanded "><a href="../content/81-fukujoshi-2.html"><strong aria-hidden="true">5.5.</strong> 副助詞　Ⅱ</a></li><li class="chapter-item expanded "><a href="../content/83-fukugouji-toiu.html"><strong aria-hidden="true">5.6.</strong> 複合辞「という」</a></li><li class="chapter-item expanded "><a href="../content/84-85-setsuzokujoshi-te-fukugouhyougen.html"><strong aria-hidden="true">5.7.</strong> 接続助詞「て」を介する複合表現</a></li><li class="chapter-item expanded "><a href="../content/88-joshi-ni-fukugouhyougen.html"><strong aria-hidden="true">5.8.</strong> 助詞「に」の使った複合表現</a></li><li class="chapter-item expanded "><a href="../content/89-joshi-to-fukugoukyougen.html"><strong aria-hidden="true">5.9.</strong> 助詞「と」の使った複合表現</a></li><li class="chapter-item expanded "><a href="../content/90-hoka-no-fukugouhyougen.html"><strong aria-hidden="true">5.10.</strong> 他の複合表現</a></li><li class="chapter-item expanded "><a href="../content/92-tougoteki-fukugoudoushi-kanyouteki-hyougen.html"><strong aria-hidden="true">5.11.</strong> 統語的複合動詞、慣用的表現</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 第六章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/74-kanou-to-nanni-no-hyougen.html"><strong aria-hidden="true">6.1.</strong> 可能と難易の表現</a></li><li class="chapter-item expanded "><a href="../content/82-hikaku-no-hyougen.html"><strong aria-hidden="true">6.2.</strong> 比較の表現</a></li><li class="chapter-item expanded "><a href="../content/68-heiretsujoshi.html"><strong aria-hidden="true">6.3.</strong> 並列助詞</a></li><li class="chapter-item expanded "><a href="../content/86-setsuji.html"><strong aria-hidden="true">6.4.</strong> 接辞</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/86-settouji.html"><strong aria-hidden="true">6.4.1.</strong> 接頭辞</a></li><li class="chapter-item expanded "><a href="../content/87-setsubiji.html"><strong aria-hidden="true">6.4.2.</strong> 接尾辞</a></li></ol></li><li class="chapter-item expanded "><a href="../content/93-fukushi-setsuzokushi-dokuritsugo.html"><strong aria-hidden="true">6.5.</strong> 副詞、接続詞、独立語</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 第七章</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../content/91-gendaini-ikiru-koten-nihongo.html"><strong aria-hidden="true">7.1.</strong> 現代に生きる古典日本語</a></li><li class="chapter-item expanded "><a href="../content/94-shijishi-2.html"><strong aria-hidden="true">7.2.</strong> 指示詞　Ⅱ</a></li><li class="chapter-item expanded "><a href="../content/95-ha-to-ga-no-tsukaiwake.html"><strong aria-hidden="true">7.3.</strong> 「は」と「が」の使い分け</a></li><li class="chapter-item expanded "><a href="../content/95-zoubibun-unagibun-konnyakubun.html"><strong aria-hidden="true">7.4.</strong> 象鼻文・うなぎ文・コンニャク文</a></li><li class="chapter-item expanded "><a href="../content/96-kaku-no-kaisoukei-to-koutai.html"><strong aria-hidden="true">7.5.</strong> 格の階層性と交替</a></li><li class="chapter-item expanded "><a href="../content/97-shiten-to-shiten-no-ikkansei.html"><strong aria-hidden="true">7.6.</strong> 視点と視点の一貫性</a></li><li class="chapter-item expanded "><a href="../content/98-99-shuui.html"><strong aria-hidden="true">7.7.</strong> 拾遺</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../appendix/course-note-mapping.html">附录A 原课程对照链接</a></li><li class="chapter-item expanded affix "><a href="../appendix/katsuyou.html">附录B 用言活用表</a></li><li class="chapter-item expanded affix "><a href="../appendix/jodoushi.html">附录C 助动词表</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Bunpō Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="敬語-1"><a class="header" href="#敬語-1">敬語 <sup class="footnote-reference"><a href="#title">1</a></sup></a></h1>
+<h2 id="敬語の種類"><a class="header" href="#敬語の種類">敬語の種類</a></h2>
+<ul>
+<li>说话人（話し手）对听话人（聞き手）表示尊敬
+<ul>
+<li>丁寧語（ていねいご，礼貌语）</li>
+<li>丁重語／謙譲語Ⅱ（ていちょうご，郑重语）</li>
+</ul>
+</li>
+<li>自己（自分側）对他人（相手方）表示尊敬，被尊敬的不一定是听话人
+<ul>
+<li>尊敬語（そんけいご，尊他语）</li>
+<li>謙譲語／謙譲語Ⅰ（けんじょうご，自谦语）</li>
+</ul>
+</li>
+</ul>
+<h3 id="丁寧語"><a class="header" href="#丁寧語">丁寧語</a></h3>
+<p>聞き手に対して丁寧に述べる。对听话人礼貌地说。</p>
+<ul>
+<li>名詞
+<ul>
+<li>だ→です</li>
+</ul>
+</li>
+<li>形容詞
+<ul>
+<li>+です（活用不可）</li>
+</ul>
+</li>
+<li>形容動詞
+<ul>
+<li>だ→です</li>
+</ul>
+</li>
+<li>動詞
+<ul>
+<li>連用形+ます</li>
+</ul>
+</li>
+</ul>
+<h3 id="丁重語"><a class="header" href="#丁重語">丁重語</a></h3>
+<p>聞き手が、話し手よりも上位であることを表す。表示听话人比说话人地位高。</p>
+<ul>
+<li>名詞
+<ul>
+<li>接头辞：拙、小、弊、愚、粗、寸、卑......</li>
+<li>例：拙宅、小生、弊社、愚弟、粗茶、寸志、卑見......</li>
+</ul>
+</li>
+<li>動詞
+<ul>
+<li>丁重語の特定形
+<ul>
+<li>する→いたす</li>
+<li>行く・来る→参る</li>
+<li>言う→申す</li>
+<li>知る・思う→存じる</li>
+<li>いる→おる</li>
+<li>ある→ござ<u>る</u></li>
+</ul>
+</li>
+<li>漢語名詞+いたす
+<ul>
+<li>山田さんに<u>代わりまして</u>、<u>わたくし</u>が説明いたします。（に代わって→に代わりまして，わたし→わたくし都表示礼貌）</li>
+<li>この電車は、間もなく東京駅に到着いたします。（主语是电车）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="尊敬語"><a class="header" href="#尊敬語">尊敬語</a></h3>
+<p>動作や状態の主体が話者よりも上位であることを表す。表达动作或状态的主体比说话人地位高。</p>
+<ul>
+<li>名詞
+<ul>
+<li>尊敬語名詞
+<ul>
+<li>～こ→～ちら</li>
+<li>人→方</li>
+<li>～様</li>
+<li>会社→貴社</li>
+<li>......</li>
+</ul>
+</li>
+<li>お／ご+名詞
+<ul>
+<li>お名前、お仕事、お手紙...（和语词倾向于用お）</li>
+<li>ご家族、ご意見、ご出身...（汉语词倾向于用ご）</li>
+<li>お電話、お洗濯...（也有"例外"：和词源有关系，并不都是中国的词汇）</li>
+<li>お／ご返事（也有都可以的）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>形容詞
+<ul>
+<li>お+形容詞
+<ul>
+<li>お忙しい、お詳しい...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>形容動詞
+<ul>
+<li>お／ご+形容動詞
+<ul>
+<li>お元気だ、お好きだ...</li>
+<li>ご立派だ、ご健康だ...</li>
+<li>ごもっともだ...（也有例外；左边例子是和语词用ご）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>動詞
+<ul>
+<li>尊敬語の特定形 <sup class="footnote-reference"><a href="#ragyoukatsuyou">2</a></sup>
+<ul>
+<li>行く・来る→いらっしゃ<u>る</u>／おいでになる</li>
+<li>来る→お越しになる／お見えになる</li>
+<li>いる→いらっしゃ<u>る</u></li>
+<li>食べる・飲む→召し上がる</li>
+<li>寝る→お休みになる</li>
+<li>言う→おっしゃ<u>る</u></li>
+<li>見る→ご覧になる</li>
+<li>着る→お召しになる</li>
+<li>死ぬ→お亡くなりになる</li>
+<li>する→なさ<u>る</u></li>
+<li>知っている→ご存じだ</li>
+</ul>
+</li>
+<li>助动词「れる・られる」
+<ul>
+<li>田中さんが書かれます。</li>
+<li>今日は田中先生が教えられます。</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+になる
+<ul>
+<li>田中先生はお帰りになりました。</li>
+<li>田中さんは結婚式にご出席になりますか？</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+なさる
+<ul>
+<li>明日からご旅行なさるそうですね。</li>
+</ul>
+</li>
+<li>ている→ていらっしゃる
+<ul>
+<li>睡眠（すいみん）は十分にとれていらっしゃいますか。</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+だ
+<ul>
+<li>社長がお呼びです。（对事实进行陈述，一般不表示具体的动作、状态）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="謙譲語"><a class="header" href="#謙譲語">謙譲語</a></h3>
+<p>通过贬低自己的行为表达对需要尊敬的人的尊敬。</p>
+<ul>
+<li>名詞
+<ul>
+<li>お／ご+名詞</li>
+</ul>
+</li>
+<li>動詞
+<ul>
+<li>謙譲語の特定形
+<ul>
+<li>訪ねる・聞く→伺う</li>
+<li>食べる・飲む→いただく</li>
+<li>言う→申し上げる</li>
+<li>会う→お目にかかる</li>
+<li>知る→存じ上げる</li>
+<li>見せる→お目にかける／ご覧に入れる</li>
+<li>聞かせる→お耳に入れる</li>
+<li>見る→拝見する</li>
+<li>読む→拝読する</li>
+<li>聞く→拝聴する</li>
+<li>借りる→拝借する（はいしゃくする）</li>
+<li>察する（さっする）→拝察する（はいさつする）</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+する
+<ul>
+<li>お客様、すぐにタクシーをお呼びします。</li>
+<li>わたくしがご案内します。</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+いたす
+<ul>
+<li>お客様、すぐにタクシーをお呼びいたします。</li>
+<li>わたくしがご案内いたします。</li>
+</ul>
+</li>
+<li>ている→ておる
+<ul>
+<li>東京に住んでおります。</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+申し上げる
+<ul>
+<li>ご結婚おめでとうございます。心よりお祝い申し上げます。</li>
+<li>祝福、祈祷、感谢、寒暄......</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="敬語と授受表現"><a class="header" href="#敬語と授受表現">敬語と授受表現</a></h2>
+<ul>
+<li>授受动词的敬语动词
+<ul>
+<li>あげる→差し上げる（謙譲語）</li>
+<li>くれる→くださる（尊敬語）</li>
+<li>もらう→いただく（謙譲語）</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+くださる
+<ul>
+<li>待ってください。→お待ちください。</li>
+<li>不審なメールに注意してください。→不審なメールにご注意ください。</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+いただく+？　请求许可
+<ul>
+<li>その先生を紹介していただけますか？</li>
+<li>その先生をご紹介いただけますか？</li>
+<li>その先生をご紹介いただけないでしょうか？</li>
+<li>その先生をご紹介いただけ<u>ません</u>でしょうか？（可）</li>
+</ul>
+</li>
+<li>「せる・させる」+くださる
+<ul>
+<li>料理を作らせてください。</li>
+<li>料理を作らせてくださいませんか？</li>
+</ul>
+</li>
+<li>「せる・させる」+もらう／いただく
+<ul>
+<li>请求许可
+<ul>
+<li>工場内を見学させてもらえませんか？</li>
+<li>工場内を見学させていただけませんか？</li>
+</ul>
+</li>
+<li>对许可的感谢
+<ul>
+<li>工場内を見学させてもらいました。</li>
+<li>工場内を見学させていただきます。（开始）</li>
+<li>工場内を見学させていただきました。（结束）</li>
+</ul>
+</li>
+<li>表达"对不起"语感时可以在未得到允许前用肯定说法
+<ul>
+<li>申し訳ありませんが、満席のため同席させていただきます。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>お／ご+連用形／漢語名詞+いただく　表达感谢
+<ul>
+<li>ご購入いただきまして、誠にありがとうございます。</li>
+</ul>
+</li>
+</ul>
+<h2 id="美化語"><a class="header" href="#美化語">美化語</a></h2>
+<p>严格上不能算役割関係范畴，单纯美化用语。上品で美しい言葉遣いをするために使う。</p>
+<ul>
+<li>お／ご+名詞
+<ul>
+<li>和语词：お肉、お酒、お菓子...</li>
+<li>汉语词：ご祝儀、ご挨拶、ご褒美...</li>
+<li>外来词：おトイレ...</li>
+<li>不能去掉お的固定表达：おにぎり、おしゃれ...</li>
+</ul>
+</li>
+<li>有固定替换的词（例）
+<ul>
+<li>腹（はら）→お腹（おなか）</li>
+<li>飯（めし）→ご飯（ごはん）</li>
+<li>便所→お手洗い</li>
+<li>食う（くう）→食べる</li>
+<li>腹が減る→お腹が空く</li>
+<li>美味い（うまい）→美味しい（おいしい）</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用上的注意"><a class="header" href="#使用上的注意">使用上的注意</a></h2>
+<ul>
+<li>内外关系
+<ul>
+<li>他社の社員：<u>渡辺社長</u>は<u>いらっしゃい</u>ます。</li>
+<li>渡辺の部下：<u>渡辺</u>はただいま外出して<u>おり</u>ます。</li>
+</ul>
+</li>
+<li>謙譲語と丁重語の違い
+<ul>
+<li>例1
+<ul>
+<li>わたくしが校内を<strong>ご案内し</strong>ます。（謙譲語，被带领参观的是受尊敬的对象）</li>
+<li>ヒロシと申します。（丁重語，我叫...这句话中没有表达对他人的尊敬）</li>
+</ul>
+</li>
+<li>例2
+<ul>
+<li>わたくしが山田さんをご案内いたします。（謙譲語，对山田表示尊敬）</li>
+<li>わたくしが山田さんを案内いたします。（丁重語，没有表达对山田的尊敬，只表达了说话的郑重、正式）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二重敬語
+<ul>
+<li>お召し上がりになる
+<ul>
+<li>召し上がる（尊敬語）</li>
+<li>お...になる（尊敬語）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>敬語連結
+<ul>
+<li>田中先生がごらんになってくださいました。
+<ul>
+<li>ご覧になる（尊敬語）</li>
+<li>くださる（尊敬語）</li>
+</ul>
+</li>
+<li>最好不要使用敬语连结，但用了也不能说是错误的情况很多。使わないほうがいいが、間違いだとは言えない場合が多い。</li>
+</ul>
+</li>
+</ul>
+<h2 id="特殊ラ行五段活用动词"><a class="header" href="#特殊ラ行五段活用动词">特殊ラ行五段活用动词</a></h2>
+<p>共有5个：</p>
+<ul>
+<li>いらっしゃる</li>
+<li>おっしゃる</li>
+<li>くださる</li>
+<li>なさる</li>
+<li>ござる</li>
+</ul>
+<h3 id="连用形变化"><a class="header" href="#连用形变化">连用形变化</a></h3>
+<p>接助动词ます时，连用形最后一个音变为い而不是り。</p>
+<ul>
+<li><strong>いらっしゃい</strong>ます。</li>
+<li><strong>おっしゃい</strong>ます。</li>
+<li><strong>ください</strong>ます。</li>
+<li><strong>なさい</strong>ます。</li>
+<li><strong>ござい</strong>ます。</li>
+</ul>
+<p>除接助动词ます外，其他情况的连用形仍然是り结尾。如：</p>
+<ul>
+<li>先生はこのように<strong>おっしゃり</strong>、すぐお帰りになりました。（连用形中顿）</li>
+<li>先生は<strong>おっしゃり</strong>ながら、コートをお召しになりました。（连用形接接续助词ながら）</li>
+<li>先生はそのように<strong>おっしゃり</strong>たがったようですが、結局口に出されなかったです。（连用形接希望助动词たがる）</li>
+</ul>
+<h3 id="命令形变化"><a class="header" href="#命令形变化">命令形变化</a></h3>
+<p>除ござる外，其他4个动词，命令形最后一个音变为い而不是れ。</p>
+<ul>
+<li>いらっしゃい</li>
+<li>おっしゃい</li>
+<li>ください</li>
+<li>なさい</li>
+</ul>
+<p>后面还可接礼貌助动词ます的命令形ませ。</p>
+<ul>
+<li><strong>いらっしゃい</strong>ませ（欢迎）</li>
+<li><strong>おっしゃい</strong>ませ（请说）</li>
+<li><strong>ください</strong>ませ（请给我）</li>
+<li><strong>なさい</strong>ませ（请做）</li>
+</ul>
+<p>均为敬语动词，使用命令形，表达的也是客气态度。</p>
+<div class="footnote-definition" id="title"><sup class="footnote-definition-label">1</sup>
+<p>对应第62课、第63课。</p>
+</div>
+<div class="footnote-definition" id="ragyoukatsuyou"><sup class="footnote-definition-label">2</sup>
+<p>下面带有下划线的，属于特殊ラ行五段活用动词。见本节末。</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../content/61-jyoukyou-no-context-no-bunrui.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../content/64-mainasu-no-taiguu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../content/61-jyoukyou-no-context-no-bunrui.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../content/64-mainasu-no-taiguu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
