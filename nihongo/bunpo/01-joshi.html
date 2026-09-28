@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>01. 助词 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html" class="active"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="助词日语语法合集"><a class="header" href="#助词日语语法合集">助词（日语语法合集）</a></h1>
+<blockquote>
+<p>返回 <a href="index-sec.html">00. 总索引（日语语法）</a>
+来源：B站 日语翻译小昊子【日语语法】合集，标注 ＃NN＝合集第 N 集。</p>
+</blockquote>
+<h2 id="だけ词源来自丈-11"><a class="header" href="#だけ词源来自丈-11">「だけ」词源：来自「丈」　#11</a></h2>
+<p>（BV1Shn8zKEQx，04:21）</p>
+<h3 id="词源"><a class="header" href="#词源">词源</a></h3>
+<ul>
+<li>「だけ」来自「<strong>丈</strong>」（たけ），原是表示<strong>物的高度・长度</strong>的具体尺度名词。</li>
+<li>后来从"<strong>固定的长度或范围</strong>"这一根本含义，派生出两大类用法（<strong>江戸時代まで広がった用法の中心は明治以降</strong>）。</li>
+</ul>
+<h3 id="用法一程度限度"><a class="header" href="#用法一程度限度">用法一：程度・限度</a></h3>
+<p>从"竹（＝丈）所具有的范围/量"直接发展而来：</p>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>含义</th></tr></thead><tbody>
+<tr><td>走れる<strong>だけ</strong>走ってみよう。</td><td>在"能跑"这个能力的<strong>最大限度</strong>内行动</td></tr>
+<tr><td>泣きたい<strong>だけ</strong>泣けばいいんだ。</td><td>让"想哭"的情感得到满足为止（<strong>许可・推奨</strong>）</td></tr>
+<tr><td>休んだら休んだ分<strong>だけ</strong>給料が減ってしまう。</td><td>比例关系：休的分量 ＝ 工资减少的分量</td></tr>
+<tr><td>アメリカで暮らす<strong>だけ</strong>の英語力がある。</td><td>足以达成"在美国生活"目的的英语能力</td></tr>
+</tbody></table>
+</div>
+<h3 id="用法二だけにだけあってだけのことはあって必然评价"><a class="header" href="#用法二だけにだけあってだけのことはあって必然评价">用法二：「…だけに／…だけあって／…だけのことはあって」（必然评价）</a></h3>
+<ul>
+<li>「…<strong>だけに</strong>」表示<strong>理由与结果的强烈连结</strong>：
+<ul>
+<li>人気ラーメン店といわれる<strong>だけ</strong>に、お客さんがたくさん並んでいる。→ 理由的份量足以引出"客人排队"这种<strong>理所当然的结果</strong>。</li>
+<li>不合格だと思っていた<strong>だけ</strong>に合格したときはとてもうれしかった。→ <strong>负期望越大</strong>，结果越好 → <strong>喜悦也被放大了相应程度</strong>。</li>
+</ul>
+</li>
+<li>「…<strong>だけあって／…だけのことはあって</strong>」表示对<strong>原因/经验</strong>的<strong>当然评价</strong>：
+<ul>
+<li>彼女は留学した<strong>だけ（のこと）は</strong>あって、英語が上手だ。→ 留学这一经历的价值，配得上"英语好"这种结果。</li>
+</ul>
+</li>
+</ul>
+<h3 id="用法三限定その程度限度を超えることはない"><a class="header" href="#用法三限定その程度限度を超えることはない">用法三：限定（その程度・限度を超えることはない）</a></h3>
+<p>一旦"丈"表示一个范围，自然引出<strong>内侧 vs 外侧</strong>的意识，外侧不含：</p>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>含义</th></tr></thead><tbody>
+<tr><td>君<strong>にだけ</strong>話す。</td><td>把说话对象<strong>限定</strong>在你一人，其他人排除</td></tr>
+<tr><td>想像する<strong>だけ</strong>でご怖い。</td><td>即便只限定在"想象"这个范围也已经引发"害怕"（其他不必做）</td></tr>
+<tr><td>学校<strong>だけでなく</strong>家庭での指導も大切だ。</td><td><strong>不止</strong>学校（限定否定），还要加入家庭</td></tr>
+</tbody></table>
+</div>
+<h3 id="结语"><a class="header" href="#结语">结语</a></h3>
+<ul>
+<li>学日语语法，与其把每个用法零散背诵，不如<strong>回到词源的根本含义去追问整体图景</strong>——这是更深、更系统理解的钥匙。</li>
+</ul>
+<h2 id="にてとて格助词--接续助词て-12"><a class="header" href="#にてとて格助词--接续助词て-12">「にて」「とて」——格助词 × 接续助词「て」　#12</a></h2>
+<p>（BV1VYxWzuEf4，02:02）</p>
+<h3 id="起点接续助词て"><a class="header" href="#起点接续助词て">起点：接续助词「て」</a></h3>
+<ul>
+<li>「て」是日语里<strong>最频繁使用的接续助词</strong>：连接动作前后关系、手段・方法、原因・理由、并列，连接补助动词。</li>
+<li>来源：<strong>助动词「つ」的连用形</strong>（下二段；未然て／連用て／終止つ／連体つる／已然つれ／命令てよ）。</li>
+<li>通常接活用语的连用形。</li>
+</ul>
+<h3 id="例外格助词-て形成にてとて"><a class="header" href="#例外格助词-て形成にてとて">例外：格助词 +「て」形成「にて」「とて」</a></h3>
+<ul>
+<li><strong>格助词「の」</strong>（其实是「に」/「と」的连用形式？）与「て」结合，产生「<strong>にて</strong>」/「<strong>とて</strong>」的接续形。</li>
+<li>学者分歧：是否应视为<strong>独立的语</strong> vs. <strong>「に/と」与「て」之间省略了某些成分</strong>。</li>
+</ul>
+<h3 id="にて格助词に-接续助词て"><a class="header" href="#にて格助词に-接续助词て">「にて」——格助词「に」+ 接续助词「て」</a></h3>
+<ul>
+<li>「にて」表示<strong>场所・时间・方法・原因</strong>等：
+<ul>
+<li>面接は本社<strong>にて</strong>行います。</li>
+<li>本日は午後五時<strong>にて</strong>閉館します。</li>
+<li>飛行機<strong>にて</strong>任地へ赴く。</li>
+<li>病気<strong>にて</strong>欠席いたします。</li>
+</ul>
+</li>
+<li>历史：「に」格助词表示场所/时间的频率<strong>远超</strong>「にて」。</li>
+<li><strong>中世以后</strong>「に＋て」缩约为「で」，如今「にて」只在<strong>特别正式</strong>的场合使用。</li>
+</ul>
+<h3 id="とて格助词と-接续助词て"><a class="header" href="#とて格助词と-接续助词て">「とて」——格助词「と」+ 接续助词「て」</a></h3>
+<ul>
+<li>来源：「<strong>と言ひて／とありて</strong>」的缩写（古典用例：《方丈记》「家にして 见れど飽かぬを」、《徒然草》「しかるべからずとて」）。</li>
+<li>现代用法（古风，使用频率低）：</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>类别</th><th>例</th></tr></thead><tbody>
+<tr><td>《格助词》…と言って／…と思って</td><td>寒いから<strong>とて</strong>、家の中にばかりいるのは体によくない</td></tr>
+<tr><td>《副助词》…でさえ</td><td>子供<strong>とて</strong>そうするだろう</td></tr>
+<tr><td>《接续助词》…としても</td><td>いまから勉強した<strong>とて</strong>間に合わない</td></tr>
+<tr><td>《接续助词》…だけあって／…なので</td><td>慣れぬこと<strong>とて</strong>、たちまち失敗した</td></tr>
+</tbody></table>
+</div>
+<h2 id="冠词和がは-16"><a class="header" href="#冠词和がは-16">冠词和「が／は」　#16</a></h2>
+<p>（BV1PJqoBtEqN，04:00）</p>
+<h3 id="起点"><a class="header" href="#起点">起点</a></h3>
+<p>英语用 <strong>a book / the book</strong> 明确区分"不定／定"——日语没有冠词，看似没有这一区分。但<strong>实际上用「が／は」承担同样的功能</strong>。</p>
+<h3 id="常规对应"><a class="header" href="#常规对应">常规对应</a></h3>
+<ul>
+<li><strong>が</strong> ↔ 不定/新信息/排他</li>
+<li><strong>は</strong> ↔ 定/已知信息/主题</li>
+</ul>
+<h3 id="例句对照"><a class="header" href="#例句对照">例句对照</a></h3>
+<ul>
+<li>✅ <strong>太郎が</strong>花子と結婚した。（太郎为新信息，<strong>排他</strong>）
+<ul>
+<li>→ ❌ 太郎<strong>は</strong>花子と結婚した。（强行成主题不自然）</li>
+</ul>
+</li>
+<li>❌ <strong>見知らぬ人が</strong>花子と結婚した。 → ❌ 見知らぬ人<strong>は</strong>花子と結婚した。
+<ul>
+<li>"见不到的人"无法成为双方共识的主题，<strong>用は反而不符合语法或不自然</strong>。</li>
+</ul>
+</li>
+<li>❌ <strong>ある人が</strong>昨日、私の家に来た。 → ❌ ある人<strong>は</strong>昨日、私の家に来た。
+<ul>
+<li>"某个人"同理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="例外类属全称句"><a class="header" href="#例外类属全称句">例外：类属／全称句</a></h3>
+<p>在<strong>全人类/普遍认知</strong>层面，可用は：</p>
+<ul>
+<li>ある人<strong>は</strong>来たが、別の人<strong>は</strong>来なかった。</li>
+<li>人<strong>は</strong>みな平等である。</li>
+<li>象<strong>は</strong>鼻が長い。</li>
+<li>時間<strong>は</strong>誰にでも平等に流れる。</li>
+</ul>
+<p>→ 这是类属/全称句中的主题用法，与"双方已知"的不同。</p>
+<h2 id="まで的词性格助词-vs-副助词-17"><a class="header" href="#まで的词性格助词-vs-副助词-17">「まで」的词性：格助词 vs 副助词　#17</a></h2>
+<p>（BV1vFiTBAEuk，01:45）</p>
+<h3 id="例句双义"><a class="header" href="#例句双义">例句双义</a></h3>
+<ul>
+<li>「シャボン玉飛んだ 屋根<strong>まで</strong>飛んだ」——「まで」既能理解为格助词，也能理解为副助词。</li>
+</ul>
+<h3 id="格助词まで时间场所的到达点"><a class="header" href="#格助词まで时间场所的到达点">格助词「まで」：时间・场所的<strong>到达点</strong></a></h3>
+<ul>
+<li>表示<strong>移动/时间的终点、界限</strong>。</li>
+<li>シャボン玉が屋根の高さへ向かって飛んでいった。（"飞到了屋顶的高度"）</li>
+<li>可接<strong>命令等谓语</strong>：東京<strong>まで</strong>行きなさい。</li>
+</ul>
+<h3 id="副助词まで程度的延伸"><a class="header" href="#副助词まで程度的延伸">副助词「まで」：<strong>程度</strong>的延伸</a></h3>
+<ul>
+<li>表示"程度延伸到……"——<strong>延伸到意想不到的范围</strong>。</li>
+<li>風があまりに強く、本来飛ぶはずのない屋根<strong>さえ</strong>も吹き飛ばされてしまった。</li>
+<li><strong>不能接命令</strong>：映画<strong>まで</strong>見なさい。（不通）</li>
+</ul>
+<p>副助词的まで可接各种词：</p>
+<div class="table-wrapper"><table><thead><tr><th>用法</th><th>例</th></tr></thead><tbody>
+<tr><td>接被动/使役</td><td>友達<strong>にまで</strong>裏切られた</td></tr>
+<tr><td>接"た"</td><td>当然のことをした<strong>までだ</strong>（仅此而已）</td></tr>
+<tr><td>接动词</td><td>調べる<strong>までも</strong>ない</td></tr>
+<tr><td>接否定/条件</td><td>全部とは言わない<strong>までも</strong>、…</td></tr>
+</tbody></table>
+</div>
+<h3 id="字典差异"><a class="header" href="#字典差异">字典差异</a></h3>
+<p>有些字典只把「まで」归类为<strong>副助词</strong>，但实际语用中两种功能都有——<strong>根据上下文判断功能差异</strong>才是关键。</p>
+<h2 id="格助词で的本质-22"><a class="header" href="#格助词で的本质-22">格助词「で」的本质　#22</a></h2>
+<p>（BV1XGVh6kEoo，05:06）</p>
+<h3 id="起点-1"><a class="header" href="#起点-1">起点</a></h3>
+<p>常见说法"で=点、を=面"——<strong>对日语初学者过于抽象</strong>，不易应用到实际场景。</p>
+<h3 id="で的本质"><a class="header" href="#で的本质">「で」的本质</a></h3>
+<p>"<strong>何かに基づいて / 何かを手がかりにして / 何かを用いて、事態が成立する</strong>"。</p>
+<p>→ <strong>不必硬套"空间性的场所"</strong>。</p>
+<h3 id="例句解剖"><a class="header" href="#例句解剖">例句解剖</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>「で」的真实含义</th></tr></thead><tbody>
+<tr><td>中国人は箸<strong>で</strong>ごはんを食べる。</td><td>箸<strong>を用いて</strong>食べる</td></tr>
+<tr><td>日本の文化というテーマ<strong>で</strong>論文を書きました。</td><td>そのテーマ<strong>をよりどころとして</strong>論文を書いた</td></tr>
+<tr><td>病気<strong>で</strong>学校を休みました。</td><td>病気という理由<strong>によって</strong>学校を休んだ</td></tr>
+<tr><td>長かった夏休みも明日<strong>で</strong>終わりです。</td><td>明日という時点<strong>を区切りとして</strong>夏休みが終わる</td></tr>
+<tr><td>その事件については警察<strong>で</strong>調べています。</td><td>警察という機関<strong>において</strong>調べている</td></tr>
+</tbody></table>
+</div>
+<h3 id="进一步扩展"><a class="header" href="#进一步扩展">进一步扩展</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>「で」的真实含义</th></tr></thead><tbody>
+<tr><td>この机は木<strong>で</strong>できている。</td><td>木という材料<strong>によって</strong>机が作られている</td></tr>
+<tr><td>テストの結果<strong>で</strong>クラスを決めよう。</td><td>テストの結果<strong>を基準として</strong>クラスを決める</td></tr>
+<tr><td>北京<strong>で</strong>オリンピックが開催された。</td><td>北京という場所<strong>において</strong>…</td></tr>
+<tr><td>夜遅いので小さな音量<strong>で</strong>音楽を聴きました。</td><td>小さな音量という状態<strong>で</strong>音楽を聴く</td></tr>
+<tr><td>彼はこのクラス<strong>で</strong>一番背が高い。</td><td>このクラスという範囲<strong>において</strong>一番背が高い</td></tr>
+</tbody></table>
+</div>
+<h3 id="学习启示"><a class="header" href="#学习启示">学习启示</a></h3>
+<ul>
+<li>死记"で＝点"会让你以为「で」只能表场所，结果听到「テーマで論文を書く」之类就懵。</li>
+<li>用「A を用いて / A によって / A において / A をよりどころとして」改写句子，能帮你彻底理解「で」——它的本质是"<strong>借助某根据/手段/材料，某种事态得以成立</strong>"。</li>
+</ul>
+<h2 id="不伴随助词使用的名词有哪些-29"><a class="header" href="#不伴随助词使用的名词有哪些-29">不伴随助词使用的名词有哪些　#29</a></h2>
+<p>（BV1ofbw6rEbK，03:19）</p>
+<h3 id="默认规则"><a class="header" href="#默认规则">默认规则</a></h3>
+<p>名词不像形容词/动词那样有活用变化，<strong>默认必须靠助词标记角色</strong>（主语が・宾语を・场所に…）——这是与英语短数形裸用、中文孤立语的根本差异。</p>
+<h3 id="例外不伴随助词的名词無助詞名詞"><a class="header" href="#例外不伴随助词的名词無助詞名詞">例外：不伴随助词的名词（無助詞名詞）</a></h3>
+<h4 id="1-副词性名词"><a class="header" href="#1-副词性名词">1. 副词性名词</a></h4>
+<p>本身就<strong>作副词使用</strong>，自然不需助词。又分三类：</p>
+<div class="table-wrapper"><table><thead><tr><th>子类</th><th>例</th></tr></thead><tbody>
+<tr><td><strong>相对时间名词</strong></td><td>昨日／来週／今年 等 作状语</td></tr>
+<tr><td><strong>数量名词</strong></td><td>本を1<strong>冊</strong>ください／水をたくさん<strong>のみ</strong>ます</td></tr>
+<tr><td><strong>接续助词性形式名词</strong></td><td>雨が降った<strong>ため</strong>試合は中止になった（ための＝理由状语）</td></tr>
+</tbody></table>
+</div>
+<h4 id="2-呼びかけ詠嘆"><a class="header" href="#2-呼びかけ詠嘆">2. 呼びかけ・詠嘆</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>例</th><th>含义</th></tr></thead><tbody>
+<tr><td>先生、<strong>質問があります</strong></td><td>呼唤对方的"称呼" + 后接内容</td></tr>
+<tr><td>うそ、<strong>信じられない</strong></td><td>感叹性"标题" + 后接内容</td></tr>
+</tbody></table>
+</div>
+<h4 id="3-并列关系的名词"><a class="header" href="#3-并列关系的名词">3. 并列关系的名词</a></h4>
+<ul>
+<li>スーパーで<strong>りんご・みかん・バナナ</strong>を買いました。</li>
+<li>指示代名词现场指示：<strong>この・その</strong> 等也不要助词 → 也归入此类。</li>
+</ul>
+<h3 id="启示"><a class="header" href="#启示">启示</a></h3>
+<ul>
+<li>除以上例外外，<strong>每个名词在句中都必须标助词</strong>——这是日语使用者时刻需要思考的事。</li>
+<li>对中文母语者尤其难——中文"孤立语"不强制助词 → 日语学习者"漏助词"是高频错误。</li>
+<li>学习建议：写日语时<strong>每放一个名词都问自己"我加什么助词"</strong>，直到形成习惯。</li>
+</ul>
+<h2 id="拟态词的に和と-7"><a class="header" href="#拟态词的に和と-7">拟态词的「に」和「と」　#7</a></h2>
+<p>（BV1a94y1N7mL，03:05）</p>
+<h3 id="起点为什么一句自然一句不自然"><a class="header" href="#起点为什么一句自然一句不自然">起点：为什么一句自然，一句不自然？</a></h3>
+<ul>
+<li>✅ ピカピカ<strong>に</strong>磨く（把……磨得锃亮）——自然</li>
+<li>❌ ピカピカ<strong>に</strong>光る——不自然</li>
+</ul>
+<p>同样用拟态词「ピカピカ」，同样修饰动词，差别只在助词。</p>
+<h3 id="修正方式"><a class="header" href="#修正方式">修正方式</a></h3>
+<ul>
+<li>✅ ピカピカ<strong>と</strong>光る</li>
+<li>✅（更常见）<strong>去掉助词</strong>，直接「ピカピカ光る」</li>
+</ul>
+<h3 id="规则"><a class="header" href="#规则">规则</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>助词</th><th>含义</th></tr></thead><tbody>
+<tr><td>拟态词 + <strong>と</strong></td><td>表示<strong>状态・样子</strong>（以何种样态进行）</td></tr>
+<tr><td>拟态词 + <strong>に</strong></td><td>表示<strong>结果</strong>（动作进行之后的结果）</td></tr>
+</tbody></table>
+</div>
+<p>例：</p>
+<ul>
+<li>車をピカピカ<strong>に</strong>洗う（洗车 → 结果是锃亮）→ <strong>に</strong></li>
+<li>ピカピカ<strong>に</strong>仕上げる（加工完成 → 结果）→ <strong>に</strong></li>
+<li>雨がシトシト<strong>と</strong>降る（淅淅沥沥地下 → 描述"下"的状态）→ <strong>と</strong></li>
+</ul>
+<h3 id="声调也不同有意思的一点"><a class="header" href="#声调也不同有意思的一点">声调也不同（有意思的一点）</a></h3>
+<ul>
+<li>同一个词：
+<ul>
+<li>表<strong>样态</strong>时 → <strong>降调</strong></li>
+<li>表<strong>结果</strong>时 → <strong>升调</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="注意"><a class="header" href="#注意">注意</a></h3>
+<ul>
+<li>以上是基于倾向的原则；<strong>语料库中也有无法用此原则解释的例子</strong>（如某些歌曲标题等固定表达）。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../bunpo/index-sec.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../bunpo/02-meishi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../bunpo/index-sec.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../bunpo/02-meishi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

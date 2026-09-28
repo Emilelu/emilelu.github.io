@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3. 实践 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html" class="active"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="从零学写作-3-实践不完整"><a class="header" href="#从零学写作-3-实践不完整">从零学写作 3. 实践（不完整）</a></h1>
+<blockquote>
+<p>返回 00. 言語学習总索引</p>
+</blockquote>
+<h2 id="输入怎么读"><a class="header" href="#输入怎么读">输入：怎么读</a></h2>
+<ul>
+<li>学会思考；文章不是读完就可以了</li>
+<li>参考母语者的文章，边读边思考：如何完成自己的文章？</li>
+</ul>
+<h2 id="加工怎么想"><a class="header" href="#加工怎么想">加工：怎么想</a></h2>
+<ul>
+<li>进行<strong>替换说法</strong>的练习</li>
+<li>先简单描述，再进行修饰</li>
+<li>写出因果，可以逐步抽象引申</li>
+<li>评论、评价、必要性、行动……</li>
+<li><strong>5W1H ＋ IDEA</strong></li>
+</ul>
+<h2 id="输出怎么积累"><a class="header" href="#输出怎么积累">输出：怎么积累</a></h2>
+<ul>
+<li>背诵一些将来可能使用到的句子</li>
+<li>抄写一些非常好的表达，后续实践中运用</li>
+</ul>
+<h2 id="检索技巧"><a class="header" href="#检索技巧">检索技巧</a></h2>
+<ul>
+<li>Search：XXX <strong>言い換え</strong>（查"换个说法"是扩展表达的好路子）</li>
+</ul>
+<hr />
+<h2 id="实践1日记小说-22"><a class="header" href="#实践1日记小说-22">实践1：日记・小说　#22</a></h2>
+<p>（BV1VY411C7tu，08:10）</p>
+<h3 id="日记-vs-小说"><a class="header" href="#日记-vs-小说">日记 vs 小说</a></h3>
+<ul>
+<li>日记写给<strong>自己</strong>看，小说写给<strong>别人</strong>看；但外语写作（尤其应试）时差异不大 → 合并讲解。</li>
+</ul>
+<h3 id="不知从何下笔时5w1h-原则"><a class="header" href="#不知从何下笔时5w1h-原则">不知从何下笔时：5W1H 原则</a></h3>
+<ul>
+<li><strong>いつ・どこ・誰・何・なぜ・どのように</strong></li>
+<li>先列出想写的各个部分，再利用日语<strong>黏着语</strong>的特性，用<strong>格助词・接续助词・副助词</strong>把它们拼接成完整场景。</li>
+<li>例：「今日は雨が降っています」（いつ・何）→「朝までは晴れていましたが、昼から急に降り始めました」→ 描述「誰」（母が…と言っていた）→ 描述「なぜ」（なぜなら傘をさしても…濡れるから）</li>
+</ul>
+<h3 id="让表达不幼稚的三点"><a class="header" href="#让表达不幼稚的三点">让表达不"幼稚"的三点</a></h3>
+<ol>
+<li><strong>句末不要全是「ました」</strong> → 让句尾产生变化：
+<ul>
+<li>用「た」交代是过去发生的，之后用<strong>现在时</strong>描写；</li>
+<li>可用<strong>名词结句</strong>（修辞）；</li>
+<li>用助动词等避免过多「〜ました／〜でした」。</li>
+</ul>
+</li>
+<li><strong>避免反复出现人称代词（尤其「私は」）</strong>
+<ul>
+<li>先用定语修饰"我"，后面直接描述事情经过即可。</li>
+</ul>
+</li>
+<li><strong>接续词・接续助词不要过频</strong>
+<ul>
+<li>依靠<strong>故事情节的变化</strong>自然产生句子之间的关系。</li>
+</ul>
+</li>
+</ol>
+<h3 id="让表达高级修辞"><a class="header" href="#让表达高级修辞">让表达"高级"（修辞）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>场景</th><th>手法</th><th>例</th></tr></thead><tbody>
+<tr><td>情景描写</td><td><strong>拟人</strong></td><td>使表达显得高级</td></tr>
+<tr><td>心理描写</td><td><strong>避免直接描述</strong></td><td>❌「うれしくて泣きそうになった」<br>✅「硬直した体が緩み、温かい血が全身を巡り、目の端に熱いものを感じた」<br>悲伤时：「暗い水底に引きずり込まれるように息苦しい」</td></tr>
+<tr><td>人物描写</td><td>抓住<strong>动作・气氛・台词</strong></td><td>「足を机に上げて座った」→ 表现桀骜不驯；外貌 + 给人的气氛</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="实践2随笔-23"><a class="header" href="#实践2随笔-23">实践2：随笔　#23</a></h2>
+<p>（BV1z64y1P7aQ，06:36）</p>
+<h3 id="随笔是什么"><a class="header" href="#随笔是什么">随笔是什么</a></h3>
+<ul>
+<li>基于<strong>自己的体验</strong>获得的知识 <strong>+ 自己的感想感悟</strong> → 散文。</li>
+<li>由两部分构成：<strong>①自己的体验 ②自己的感想</strong>（有机结合）。</li>
+<li>与论文的区别：<strong>不需要严密的论证过程</strong>。</li>
+</ul>
+<h3 id="写随笔的注意点"><a class="header" href="#写随笔的注意点">写随笔的注意点</a></h3>
+<ol>
+<li>必须基于<strong>自己的经验</strong>；</li>
+<li>是<strong>给别人看</strong>的文章（不是日记）；</li>
+<li>不能只写肤浅感想，要有<strong>自己独立的思考</strong>。</li>
+</ol>
+<h3 id="抓住三点"><a class="header" href="#抓住三点">抓住三点</a></h3>
+<ul>
+<li>主题与素材来自<strong>周边已经发生的事情</strong>；</li>
+<li>写出<strong>具体事实 + 感想</strong>；</li>
+<li>与生硬书面语不同，随笔<strong>可以写得简单些</strong>（可用偏口语的表达）。</li>
+</ul>
+<h3 id="出类拔萃的三点"><a class="header" href="#出类拔萃的三点">出类拔萃的三点</a></h3>
+<ol>
+<li>内容与读者<strong>产生共鸣</strong>；</li>
+<li>写身边<strong>不那么常见</strong>的事（过于常见没意思）；</li>
+<li>有<strong>自己独特的视点与思考</strong>。</li>
+</ol>
+<h3 id="范文言葉の重み语言的分量结构"><a class="header" href="#范文言葉の重み语言的分量结构">范文《言葉の重み》（语言的分量）结构</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>部分</th><th>内容</th></tr></thead><tbody>
+<tr><td>起因</td><td>日常看到"杀人事件不断增加"</td></tr>
+<tr><td>作者的思考</td><td>有些人不说真实想法一直忍耐 → 像气球膨胀 → 终有一天破裂（引发事件）</td></tr>
+<tr><td>追问</td><td>为什么没人发现？→ 因为<strong>先入観（成见）</strong></td></tr>
+<tr><td>正反论证</td><td>语言对人的<strong>负面影响</strong> vs 仅仅一句话让人非常高兴</td></tr>
+<tr><td>结论</td><td>一句话可能温暖人心也可能伤人 → 要重新审视自己所说的话</td></tr>
+<tr><td>进一步</td><td>除关注身边哭泣的人，也要关注<strong>看起来活泼的人</strong>（外表无恙，内心可能有阴暗面）</td></tr>
+<tr><td>结尾</td><td>"没有犯罪的世界"是否可能？答案是否定的，但只要相信并脚踏实地前行，终会到来</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="实践3读后感-24"><a class="header" href="#实践3读后感-24">实践3：读后感　#24</a></h2>
+<p>（BV1fm4y1Z7LB，09:45）</p>
+<h3 id="四大部分感想是核心"><a class="header" href="#四大部分感想是核心">四大部分（感想是核心）</a></h3>
+<ol>
+<li><strong>开端</strong>：为什么选择写这本书 + 读之前自己的状态</li>
+<li><strong>故事梗概</strong>：主要内容总结</li>
+<li><strong>感想</strong>：整篇<strong>最重要的核心</strong></li>
+<li><strong>总结</strong>：学到了什么 + 读后自己有哪些改变</li>
+</ol>
+<h3 id="经典句式可直接套用"><a class="header" href="#经典句式可直接套用">经典句式（可直接套用）</a></h3>
+<h4 id="开端"><a class="header" href="#开端">开端</a></h4>
+<ul>
+<li>用「<strong>しかし</strong>」将自己与书中主人公对比</li>
+<li>「〜<strong>から、この本に興味を持った</strong>」</li>
+<li>「私がこの本を選んだ理由は〜」</li>
+<li>「〜<strong>一冊の本が目に留まった</strong>」＋ 介绍封面（学生服の男子がサッカーボールに足を乗せている爽やかなイラストが表紙に描かれた）</li>
+</ul>
+<h4 id="梗概"><a class="header" href="#梗概">梗概</a></h4>
+<ul>
+<li>用实践1 的 <strong>5W1H</strong> 方法</li>
+<li>「〜少しずつ変わっていく物語だ」＋ 介绍题材 ＋「〜場面もありました」</li>
+</ul>
+<h4 id="感想核心"><a class="header" href="#感想核心">感想（核心）</a></h4>
+<ol>
+<li>「今でも忘れられないのは〜（场景）」＋ 感想</li>
+<li>「〜の場面が印象に残った。<strong>もし私なら</strong>〜（与主人公行动对比）」</li>
+<li>「最も心を動かされたのは〜（一句话/一个场景）」</li>
+<li>「この本を読む前は〜だったが、〜を読んで、今後は〜していきたい」</li>
+<li>「一番好きな登場人物は〜。理由は〜」（也可写"最讨厌的是谁＋理由"）</li>
+</ol>
+<h4 id="总结"><a class="header" href="#总结">总结</a></h4>
+<ul>
+<li>「私はこの作品を読むまで、〜の重要さについて考えたこともありませんでした。<strong>しかし今は違います</strong>。〜ことを学びました。」</li>
+<li>「この本は私に〜の大切さを教えてくれました。主人公が〜したことを<strong>きっかけに</strong>、今まで気にも止めなかったことに目が向くようになりました。<strong>その結果</strong>〜。これからの生活の中でこの本から学んだことを<strong>生かして</strong>行動していきたいと思います。」</li>
+<li>「この本を通して作者は〜を<strong>伝えたいのだと感じます</strong>」／「〜ことに<strong>気づきました</strong>」／「このことを<strong>胸に深く刻み</strong>過ごしていきたいです」</li>
+<li>「〜のように強い意志とその先にあるものを目指して一歩ずつ進んでいきたいと思った」</li>
+</ul>
+<h3 id="四种创作类型不必死守开端梗概感想结尾"><a class="header" href="#四种创作类型不必死守开端梗概感想结尾">四种创作类型（不必死守"开端→梗概→感想→结尾"）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>类型</th><th>结构</th></tr></thead><tbody>
+<tr><td><strong>① 感想展开型</strong>（最常见・应试推荐）</td><td>先给出最深刻的感想 → 具体展开（结合自己生活）→ <strong>升华</strong>（与社会问题对比）→ 结论</td></tr>
+<tr><td><strong>② 问答型</strong></td><td>首段抛出问题 → 通过故事梗概论述 → 末段解答（解答即感想＋总结）</td></tr>
+<tr><td><strong>③ Before-After 对照型</strong></td><td>读前的想法/行为 vs 读后的想法/行为交叉对比 → 得出结论</td></tr>
+<tr><td><strong>④ 高级型</strong></td><td>先写一个与书无关的话题 → 展开 → 最后回到书中内容（制造意外性）。<strong>应试一般不用</strong></td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="实践4说明文-25"><a class="header" href="#实践4说明文-25">实践4：说明文　#25</a></h2>
+<p>（BV1iG4y1k7RP，04:47）</p>
+<h3 id="说明文是什么"><a class="header" href="#说明文是什么">说明文是什么</a></h3>
+<p>把某个人／某件事／某个东西<strong>原原本本</strong>地向不了解的人阐述。</p>
+<ul>
+<li>两个要件：<strong>①准确性 ②易懂性</strong></li>
+<li>必须写成<strong>书面语</strong>（口语/书面语的区别见进阶部分）。</li>
+</ul>
+<h3 id="必须避免的三类表达"><a class="header" href="#必须避免的三类表达">必须避免的三类表达</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>类别</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>授受表达</strong></td><td>授受动词这一类</td></tr>
+<tr><td><strong>被害表达</strong></td><td>用被动态表示受害</td></tr>
+<tr><td><strong>主观表达</strong></td><td><strong>最容易忽视、最容易搞错</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="例题改造"><a class="header" href="#例题改造">例题改造</a></h3>
+<p>❌ 前回の野外実験は台風に<strong>来られて</strong>装置が破損して<strong>しまった</strong>。しかし今回は一週間<strong>も</strong>晴天が続いて<strong>くれたおかげで</strong>実験に成功した。</p>
+<p>问题逐一对应：</p>
+<div class="table-wrapper"><table><thead><tr><th>表达</th><th>问题</th></tr></thead><tbody>
+<tr><td>台風に<strong>来られて</strong></td><td>被害（被动受害）</td></tr>
+<tr><td>破損して<strong>しまった</strong></td><td>遗憾・后悔语气</td></tr>
+<tr><td>一週間<strong>も</strong></td><td>强调"主观上觉得时间长"</td></tr>
+<tr><td>続いて<strong>くれたおかげで</strong></td><td>"多亏了……"，主观色彩浓重</td></tr>
+</tbody></table>
+</div>
+<p>✅ 改法：用**形式名词「ため」**等客观表达原因、直接陈述事实、去掉「も」「くれる」「おかげで」。</p>
+<h3 id="核心能力判断一个语法是客观还是主观"><a class="header" href="#核心能力判断一个语法是客观还是主观">核心能力：判断一个语法是"客观"还是"主观"</a></h3>
+<ul>
+<li>
+<p>学语法不能只记<strong>词性・接续・含义</strong>，还要掌握它<strong>是在客观陈述事实，还是带有说话人的主观色彩</strong>。</p>
+</li>
+<li>
+<p>主观 → 客观的对应例：</p>
+<div class="table-wrapper"><table><thead><tr><th>主观</th><th>→ 客观</th></tr></thead><tbody>
+<tr><td><strong>ことだし</strong></td><td><strong>ため</strong></td></tr>
+<tr><td><strong>くせに</strong></td><td><strong>が</strong></td></tr>
+<tr><td><strong>が早いか</strong></td><td>（相应的客观表达）</td></tr>
+</tbody></table>
+</div></li>
+<li>
+<p>这类"看似同义、实则一主观一客观"的对应关系<strong>非常多</strong>。</p>
+</li>
+<li>
+<p>分不清这一点，写说明文・议论文时就会处处出错。</p>
+</li>
+</ul>
+<hr />
+<h2 id="实践6意见文建议书-27"><a class="header" href="#实践6意见文建议书-27">实践6：意见文（建议书）　#27</a></h2>
+<p>（BV1SW4y1J7eJ，04:07）</p>
+<h3 id="意见文-vs-小论文"><a class="header" href="#意见文-vs-小论文">意见文 vs 小论文</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th>重点</th></tr></thead><tbody>
+<tr><td><strong>论文（小论文）</strong></td><td><strong>论述的过程</strong></td></tr>
+<tr><td><strong>意见文</strong></td><td>对某个问题<strong>提出自己的意见・主张・想法</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="最简单的三部分"><a class="header" href="#最简单的三部分">最简单的三部分</a></h3>
+<ol>
+<li><strong>对事实提出自己的意见（主张）</strong></li>
+<li><strong>理由与根据</strong></li>
+<li><strong>总结</strong></li>
+</ol>
+<p>例（是否增设爱心座）：</p>
+<ul>
+<li>主张：没有必要增设爱心座</li>
+<li>理由：乘车的每个人互相为对方考虑即可</li>
+<li>根据：德国没有爱心座，人们会按需让座／被让座</li>
+<li>总结：再次陈述主张</li>
+</ul>
+<h3 id="最难也是核心写出支持或反对的理由"><a class="header" href="#最难也是核心写出支持或反对的理由">最难也是核心：写出"支持或反对的理由"</a></h3>
+<ul>
+<li>例："穿校服是好还是不好" → 赞成有 7 种理由，反对也有 7 种理由。</li>
+<li><strong>找到合适的理由，是写意见文最重要的环节。</strong></li>
+</ul>
+<h3 id="技巧"><a class="header" href="#技巧">技巧</a></h3>
+<ul>
+<li>多个理由：用<strong>接续助词或接续词</strong>连接（补充理由时常用接续词）。</li>
+<li>字数不够／想更丰满：加入<strong>自己或别人身上真实发生的事情</strong>。
+<ul>
+<li>例：有校服就不用每天早上急急忙忙想穿什么。</li>
+</ul>
+</li>
+<li><strong>进阶做法</strong>：写完自己的主张后，在总结前<strong>先陈述并理解相反的观点</strong>，再说出自己真正的意见 → 使文章更<strong>理性</strong>、内容更丰富。</li>
+</ul>
+<hr />
+<h2 id="实践5小论文-26"><a class="header" href="#实践5小论文-26">实践5：小论文　#26</a></h2>
+<p>（BV1k24y1d7VR，16:35）</p>
+<h3 id="作文-vs-小论文"><a class="header" href="#作文-vs-小论文">作文 vs 小论文</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th>作文</th><th>小论文</th></tr></thead><tbody>
+<tr><td>内容</td><td>对自己经历的描述 + <strong>主观感想</strong></td><td>提出立场 + <strong>论述</strong>赞成/反对的理由</td></tr>
+<tr><td>主体</td><td>故事描写</td><td><strong>论述</strong></td></tr>
+<tr><td>要求</td><td>—</td><td><strong>有说服力</strong>、站在<strong>客观视点</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="论文四基础部分"><a class="header" href="#论文四基础部分">论文四基础部分</a></h3>
+<p><strong>① 作者的主张 → ② 主张的根据 → ③ 具体的事例 → ④ 结论</strong>
+（例：日本应大量接受外国劳动者 → 理由 → 具体事例 → 结论）</p>
+<h3 id="四种论述方法"><a class="header" href="#四种论述方法">四种论述方法</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>方法</th><th>说明</th><th>例</th></tr></thead><tbody>
+<tr><td><strong>归纳法</strong></td><td>由多个<strong>事实</strong>得出结论</td><td>傍晚烟飘向东→次晨下雨（连续数日如此）→ 此地傍晚刮西风就会下雨</td></tr>
+<tr><td><strong>演绎法</strong></td><td>由<strong>一般性原理</strong>推出结论</td><td>人固有离别 → 我们也总会与父母分别</td></tr>
+<tr><td><strong>三段论法</strong></td><td>大前提 + 小前提 → 结论</td><td>人是动物／我是人／我是动物</td></tr>
+<tr><td><strong>辩证法</strong></td><td>正反对立观点组合 → <strong>更高层次的结论</strong></td><td>地球环境危机 + 科技本为幸福而生 → 善用科技可实现人与自然共生</td></tr>
+</tbody></table>
+</div>
+<h3 id="开头的五种写法"><a class="header" href="#开头的五种写法">开头的五种写法</a></h3>
+<ol>
+<li>直接<strong>下定义</strong></li>
+<li>写为什么要写这篇论文的原因</li>
+<li><strong>引用格言</strong></li>
+<li>向读者<strong>设问</strong></li>
+<li>开门见山讲一件<strong>不寻常的事</strong>（如"熊闯入民宅引发骚动"）抓住注意</li>
+</ol>
+<blockquote>
+<p>开始论述时<strong>避免主观表达</strong>，尽量客观描述（如"我认为训练是必要的"→ 用<strong>自发态</strong>等方式改为客观表达）。</p>
+</blockquote>
+<h3 id="结尾的四种方式"><a class="header" href="#结尾的四种方式">结尾的四种方式</a></h3>
+<ol>
+<li>与<strong>开头呼应</strong></li>
+<li><strong>呼吁</strong>的方式（〜べきだ 等）</li>
+<li><strong>总结</strong>形式（上述をまとめると〜）</li>
+<li><strong>展望未来的研究课题</strong>（残された課題として〜）</li>
+</ol>
+<h3 id="论文常用表达模板"><a class="header" href="#论文常用表达模板">论文常用表达模板</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>功能</th><th>表达</th></tr></thead><tbody>
+<tr><td><strong>提出论点</strong></td><td>本論文では〜がどのように形成されてきたかについて<strong>考察する</strong></td></tr>
+<tr><td><strong>必要条件</strong></td><td>〜<strong>必要がある</strong>；更强烈：<strong>〜なければならない</strong></td></tr>
+<tr><td><strong>指出先行研究的问题点</strong></td><td>〜についての研究は<strong>極めて少ない</strong>／〜についての検討は<strong>十分に行われているとは言えない</strong>／〜についての研究は<strong>ほとんどなされていない</strong>／<strong>不明な点が多い</strong></td></tr>
+<tr><td><strong>研究目的</strong></td><td>本研究の目的は〜を<strong>明らかにすることである</strong>／本研究は〜を<strong>解明するためである</strong></td></tr>
+<tr><td><strong>下定义</strong></td><td>〜とは〜を<strong>指す</strong>／〜とは〜の<strong>ことである</strong><br>主动：<strong>〜を〜と定義する</strong>（某人定义时用主动，如「佐藤は〜と定義している」）<br>被动：<strong>〜は〜と定義される</strong>（不特定多数认可的定义）</td></tr>
+<tr><td><strong>分类</strong></td><td>〜は〜に<strong>分類される／分けられる</strong>；粗分 <strong>大別される</strong> → 细分 <strong>さらに〜に分類される</strong>；依据用 <strong>〜によって／〜のことで</strong></td></tr>
+<tr><td><strong>图表</strong></td><td>〜の推移を<strong>図1に示す</strong>／図1は〜を<strong>示している</strong>／表1に〜を<strong>示す</strong>／表1は〜を<strong>示したものである</strong></td></tr>
+<tr><td><strong>数值</strong></td><td>不足：<strong>〜未満</strong>；超出：<strong>〜を超える</strong>；占比：<strong>〜を占める</strong><br><strong>约数</strong>（论文用）：<strong>約・ほぼ・おおよそ・程度・前後</strong>（「ぐらい／ばかり」太口语，不用）<br>不足：<strong>弱（じゃく）／近く（ちかく）</strong>；超过：<strong>強（きょう）／余（あまり）</strong></td></tr>
+<tr><td><strong>变化</strong></td><td><strong>大幅な上昇が見られる</strong>／主动句：<strong>上昇を見せている</strong><br>无变化：<strong>変化が見られない</strong>；长期不变：表示"持续不变"的表达</td></tr>
+<tr><td><strong>对比</strong></td><td><strong>〜に対して</strong>（基础）／<strong>〜より多かった</strong>（前者更多）／<strong>〜よりも〜のほうが〜</strong>（后者更…）</td></tr>
+<tr><td><strong>排序</strong></td><td>第三位は〜で、以下〜の<strong>順になっている</strong></td></tr>
+<tr><td><strong>得出结论</strong></td><td><strong>これより〜がわかる</strong>／<strong>このことから〜がわかる</strong>；更书面：<strong>〜は明らかである</strong></td></tr>
+<tr><td><strong>原因</strong></td><td><strong>〜のは〜ためである</strong>／<strong>〜の原因として〜があげられる</strong>／<strong>〜背景には〜がある</strong>／<strong>〜は〜に起因している</strong></td></tr>
+<tr><td><strong>预测</strong></td><td><strong>〜と予測される／予想される</strong>；某人的预测：<strong>〜は〜と予想している</strong>；大众：<strong>予想されている</strong><br>※<strong>予測</strong>比<strong>予想</strong>基于更精确的证据</td></tr>
+<tr><td><strong>引用</strong></td><td>〜と<strong>述べている</strong>／〜と<strong>言われている</strong>／〜と<strong>されている</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="列举"><a class="header" href="#列举">列举</a></h3>
+<ul>
+<li>一种列举形式<strong>后面必须跟名词谓语句</strong>；另一种形式后可接任意形式的句子。</li>
+<li>顺序词：<strong>まず／次に／また／さらに／終わりに／他にも</strong>
+<ul>
+<li>两个事物：<strong>まず・また</strong></li>
+<li>三个：<strong>まず・また・さらに</strong></li>
+<li>四个及以上：按相应顺序</li>
+<li><strong>他にも</strong>：列举其他情况</li>
+</ul>
+</li>
+</ul>
+<h3 id="同意--反对"><a class="header" href="#同意--反对">同意 / 反对</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>立场</th><th>表达</th></tr></thead><tbody>
+<tr><td><strong>同意</strong></td><td>〜の見解に<strong>賛成である</strong>／〜に<strong>異論はない</strong><br>间接：〜が〜と述べていることが<strong>注目される</strong></td></tr>
+<tr><td><strong>反对</strong></td><td>〜の見解に<strong>異論がある</strong>／〜には<strong>同意できない</strong>／〜には<strong>疑問がある</strong><br>间接：〜は〜と述べているが、<strong>どうだろうか</strong><br>常用"<strong>先暂且认可后转折</strong>"：<strong>確かに〜。しかし〜</strong></td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="实践7报告レポート-28"><a class="header" href="#实践7报告レポート-28">实践7：报告（レポート）　#28</a></h2>
+<p>（BV1124y1Q78j，06:03）</p>
+<h3 id="报告-vs-论文"><a class="header" href="#报告-vs-论文">报告 vs 论文</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th>论文</th><th>报告</th></tr></thead><tbody>
+<tr><td>目的</td><td><strong>论证</strong>某事物・现象</td><td><strong>总结</strong>已经得到的结论或知识</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>分类：<strong>一般性报告</strong>（含序论・本论・结论，与论文/意见文类似）／<strong>调查・实验报告</strong></li>
+</ul>
+<h3 id="调查实验报告的四部分"><a class="header" href="#调查实验报告的四部分">调查・实验报告的四部分</a></h3>
+<p><strong>目的 → 方法 → 结果 → 对结果的考察与展望</strong></p>
+<h3 id="常用句式"><a class="header" href="#常用句式">常用句式</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>部分</th><th>表达</th></tr></thead><tbody>
+<tr><td>开头（方法概述）</td><td>〜に実施したアンケート調査の<strong>結果を中心に</strong>、調査対象の〜について<strong>報告する</strong></td></tr>
+<tr><td>结果</td><td>〜と<strong>尋ねたところ</strong>、〜（前引问卷问题，后详述结果：〜％の人が〜と回答した）</td></tr>
+<tr><td>自己的看法</td><td>〜と<strong>言える</strong></td></tr>
+<tr><td>结尾（考察与展望）</td><td>今後も〜に関する〜調査を<strong>定期的に実施することで</strong>、対象者の〜の<strong>把握に努め</strong>、〜が<strong>改善されるよう取り組んでいきたい</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="范文结构割愛かつあい词义变迁的问卷调查"><a class="header" href="#范文结构割愛かつあい词义变迁的问卷调查">范文结构：「割愛（かつあい）」词义变迁的问卷调查</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>段</th><th>内容</th></tr></thead><tbody>
+<tr><td>1 目的</td><td>词典中该词的意思 → 用「<strong>ところが</strong>」转折，指出现代使用中出现新状况（单纯当作"省略"来用）</td></tr>
+<tr><td>2 方法</td><td>在网上把 A、B 两个例句做成问卷，对 <strong>600 人</strong>调查</td></tr>
+<tr><td>3 结果</td><td>传统上 B 正确、A 奇怪，但这样回答的人<strong>只占约 25%</strong>；<strong>49%</strong> 认为（原为误用的）A 才是现代主流</td></tr>
+<tr><td>4 考察・展望</td><td>原本"割愛"只用于<strong>非常重要的事</strong>，现代则未必——即使是不重要的事也用它表示"省略"</td></tr>
+</tbody></table>
+</div>
+<p>→ 其他学科也按<strong>目的・方法・结果・考察</strong>这四部分来写。</p>
+<hr />
+<h2 id="实践9广告语キャッチコピー-30"><a class="header" href="#实践9广告语キャッチコピー-30">实践9：广告语（キャッチコピー）　#30</a></h2>
+<p>（BV1jG4y1M7Pc，08:21）</p>
+<blockquote>
+<p>随着跨境电商发展，写广告语逐渐成为日语写作中<strong>必不可少的训练环节</strong>。</p>
+</blockquote>
+<h3 id="首要原则不要又长又完整"><a class="header" href="#首要原则不要又长又完整">首要原则：不要"又长又完整"</a></h3>
+<ul>
+<li>语法正确但<strong>太长・太完整・太繁琐</strong>的句子不适合做广告语。</li>
+<li>例：改为「<strong>この性能で、この価格</strong>。」（这么强的性能、这么便宜的价格）
+<ul>
+<li>简洁、有节奏感，并使用了<strong>名词结句</strong>的修辞（进阶5）。</li>
+</ul>
+</li>
+<li>夸张表达也适合：「この性能でこの価格、<strong>嘘でしょ？</strong>」</li>
+</ul>
+<h3 id="广告语-20-个诀窍"><a class="header" href="#广告语-20-个诀窍">广告语 20+ 个诀窍</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>类别</th><th>做法 / 例</th></tr></thead><tbody>
+<tr><td><strong>明确目的</strong></td><td>如旅游广告就围绕"旅游"</td></tr>
+<tr><td><strong>具体说明好处</strong></td><td>不说「体にいい」，而说「<strong>脂肪の吸収を抑える</strong>」</td></tr>
+<tr><td><strong>简洁・有节奏感</strong></td><td>如泡面广告，短促有力</td></tr>
+<tr><td><strong>明确对象</strong></td><td>「〜で<strong>お悩みのあなたへ</strong>」</td></tr>
+<tr><td><strong>主动提供信息</strong></td><td>「<strong>〜をお教えします</strong>」</td></tr>
+<tr><td><strong>小故事</strong></td><td>「一晩で100点上げた」（让人想点进去看方法）</td></tr>
+<tr><td><strong>数值化</strong></td><td>「リピート率 <strong>98.5%</strong>」</td></tr>
+<tr><td><strong>刺激欲望</strong></td><td>与季节相衬的衣服</td></tr>
+<tr><td><strong>抒发情感</strong></td><td>「<strong>運命を変える</strong>一品との出会い」</td></tr>
+<tr><td><strong>换强烈情感的词</strong></td><td>安い → <strong>激安</strong>；必要 → <strong>手放せない</strong></td></tr>
+<tr><td><strong>讲切实利益</strong></td><td>「99%除菌」→「<strong>お子さまを菌やカビの被害から守る</strong>」</td></tr>
+<tr><td><strong>提高权威性</strong></td><td>「女優の〜さんも愛用」</td></tr>
+<tr><td><strong>拟声・拟态词</strong>（日语特色）</td><td>柔软 → <strong>ふわふわ</strong>（带来身临其境的感觉）</td></tr>
+<tr><td><strong>感叹词</strong></td><td>「うそ！」「えっ！」</td></tr>
+<tr><td><strong>直接提问</strong></td><td>「借金のことでお悩みではありませんか？」</td></tr>
+<tr><td><strong>制造紧迫感</strong></td><td>「<strong>今すぐ</strong>試験対策を始めましょう」</td></tr>
+<tr><td><strong>强调首创</strong></td><td>「全国（世界）で<strong>初めて</strong>の〜」</td></tr>
+<tr><td><strong>抓住"想更轻松"的心理</strong></td><td>「1日30分聞くだけで英語がペラペラに」</td></tr>
+<tr><td><strong>颠覆常识</strong></td><td>「1日5分で10kg痩せる」（与一般认知相悖）</td></tr>
+<tr><td><strong>唤起虚荣心</strong></td><td>「賢いあなたなら、どちらがお得かお分かりでしょう」</td></tr>
+<tr><td><strong>激起好奇心</strong></td><td>「ビリだった私が、この勉強法で<strong>トップ</strong>に」</td></tr>
+<tr><td><strong>借用话题性新闻</strong></td><td>「技術の進歩があなたを失業させる」→ AI 课程广告</td></tr>
+<tr><td><strong>排除特定人群</strong></td><td>「肌の老化が気にならない方は、どうか読み進めないでください」</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="实践8书信邮件-29"><a class="header" href="#实践8书信邮件-29">实践8：书信・邮件　#29</a></h2>
+<p>（BV1JG4y1A7Zv，07:32）</p>
+<blockquote>
+<p>书信的基础格式见<strong>基础第10课</strong>。</p>
+</blockquote>
+<h3 id="一先定语体和语-vs-汉语"><a class="header" href="#一先定语体和语-vs-汉语">一、先定"语体"：和语 vs 汉语</a></h3>
+<p>同样内容，日语有两种风格：</p>
+<div class="table-wrapper"><table><thead><tr><th>语体</th><th>感觉</th><th>例</th></tr></thead><tbody>
+<tr><td><strong>和语</strong></td><td>平易近人</td><td>お知らせします</td></tr>
+<tr><td><strong>汉语</strong></td><td>生硬・正式</td><td>ご通知申し上げます</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><strong>第一步</strong>：根据<strong>写的内容与对象</strong>，决定以和语为主还是以汉语词汇为主。</li>
+</ul>
+<h3 id="二头语与结语頭語結語"><a class="header" href="#二头语与结语頭語結語">二、头语与结语（頭語・結語）</a></h3>
+<ul>
+<li>一般<strong>成对出现</strong>（如「拝啓」→「敬具」）。</li>
+<li>按场合选择：一般场合／礼貌场合／<strong>省略寒暄</strong>的场合／<strong>有急事</strong>的场合／<strong>回信</strong>的场合／就同一件事<strong>再次写信</strong>的场合。</li>
+<li>现代（尤其<strong>电子邮件</strong>）<strong>也常不写</strong>头语结语。</li>
+</ul>
+<h3 id="三寒暄语時候の挨拶"><a class="header" href="#三寒暄语時候の挨拶">三、寒暄语（時候の挨拶）</a></h3>
+<ul>
+<li>难记，实际写信时通常<strong>上网查</strong>特定的寒暄语；考试记典型常用的即可。</li>
+<li><strong>Word 可插入</strong>：「插入」选项卡 →「日语问候语」→ 按<strong>月份</strong>选择时令寒暄；开头语・结语也能选。</li>
+<li><strong>并非任何场合都要寒暄</strong>：
+<ul>
+<li><strong>道歉信・慰问信一般不用</strong>寒暄语；</li>
+<li><strong>商务场合必须有</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="四结尾寒暄的六种"><a class="header" href="#四结尾寒暄的六种">四、结尾寒暄的六种</a></h3>
+<ol>
+<li>祝福对方健康幸福</li>
+<li>希望对方事业有更大发展</li>
+<li>期待今后仍有联系</li>
+<li>总结前文</li>
+<li>希望对方帮忙传达某事</li>
+<li>希望得到对方回信</li>
+</ol>
+<h3 id="五商务信件的结构要点"><a class="header" href="#五商务信件的结构要点">五、商务信件的结构要点</a></h3>
+<ol>
+<li>时令寒暄之后 → 祝愿对方健康或生意兴隆
+<ul>
+<li>⚠️ 这一部分<strong>一般用肯定句，不用疑问句</strong>（要"确信"对方生意兴隆/身体健康）。</li>
+</ul>
+</li>
+<li>接着<strong>对对方表示感谢</strong>（いつもお世話になっております 等）。</li>
+<li>开始写正文时<strong>一般要加起语</strong>（「<strong>さて</strong>」等）。</li>
+<li>结尾不要忘了<strong>结尾寒暄</strong>和<strong>头语・结语</strong>。</li>
+</ol>
+<h3 id="六敬语的三个易错点"><a class="header" href="#六敬语的三个易错点">六、敬语的三个易错点</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>易错点</th><th>说明 / 例</th></tr></thead><tbody>
+<tr><td><strong>① 「ござる」与「いらっしゃる」</strong></td><td>说<strong>对方</strong>的事<strong>不用「ござる」</strong>，要用「<strong>いらっしゃる</strong>」；<br>只有说<strong>自己这边</strong>的事才用「ござる」。<br>❌ 田中さんはどちらから<strong>ござる</strong>？ → ✅ <strong>いらっしゃる</strong></td></tr>
+<tr><td><strong>② 双重敬语</strong></td><td>特殊尊他语 + 尊敬助动词叠加 → <strong>一般视为错误，要避免</strong></td></tr>
+<tr><td><strong>③ 敬语过度</strong></td><td>为表敬意而过分使用，要避免（如"正在交往"直接写即可）</td></tr>
+</tbody></table>
+</div>
+<h3 id="七忌讳词语"><a class="header" href="#七忌讳词语">七、忌讳词语</a></h3>
+<ul>
+<li>避免不吉利的表达：
+<ul>
+<li>❌「失敗しないように頑張って」</li>
+<li>✅「うまくいくように応援しています」</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="实践10提高写作水平的三个要领全套教程最终课-31"><a class="header" href="#实践10提高写作水平的三个要领全套教程最终课-31">实践10：提高写作水平的三个要领（全套教程最终课）　#31</a></h2>
+<p>（BV1mG4y1M7vf，05:38）</p>
+<h3 id="课程回顾"><a class="header" href="#课程回顾">课程回顾</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>阶段</th><th>内容</th></tr></thead><tbody>
+<tr><td>基础 1–10</td><td>从<strong>语法与用词</strong>层面梳理写作中最容易犯的基础错误</td></tr>
+<tr><td>进阶 11–20</td><td>在基础上扩展，教如何写出<strong>更地道的日语句子</strong></td></tr>
+<tr><td>实践 21–31</td><td>按<strong>题材</strong>分别讲解并练习写作方法</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>写作对<strong>母语者</strong>也不容易，用外语写作更是难上加难——想要写好，可能需要<strong>十年甚至二三十年</strong>的努力。</p>
+</blockquote>
+<h3 id="要领一学会思考思考能力"><a class="header" href="#要领一学会思考思考能力">要领一：学会思考（思考能力）</a></h3>
+<p>以"一张画着木材的图片"为例：</p>
+<ol>
+<li><strong>先描述场景</strong>：「空き地に材木が置いてある」→ 太单调。</li>
+<li><strong>加修饰成分</strong>使其具体生动：「少し傾いて、形も大きさも違う材木が置いてある」。</li>
+<li><strong>但只描述不能成为作文</strong> → 需要思考扩展：
+<ul>
+<li>形状大小不同的木材组合得好就能盖房子；</li>
+<li>更抽象一步：<strong>人也一样</strong>，每个人不同，应构建能容纳形形色色之人的社会；</li>
+<li>继续扩展：不应建造所有人都一样的社会，而要注重<strong>人与人之间的差异</strong>；</li>
+<li>最后：想要更好的社会，我们需要怎么做。
+→ 从一张木材图片扩展到<strong>人类与社会</strong>，这就是写作中<strong>必不可少的思考能力</strong>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="要领二在阅读中提高不能读完就完"><a class="header" href="#要领二在阅读中提高不能读完就完">要领二：在阅读中提高（不能"读完就完")</a></h3>
+<ul>
+<li>不能像做阅读理解那样"题目做对就行"——那太可惜了。</li>
+<li>要珍惜每一篇<strong>日语母语者写的文章</strong>，从两方面入手：
+<ol>
+<li><strong>文章的构成</strong>：如果使用这篇文章的构成，我要怎样完成自己的文章？</li>
+<li><strong>其中使用的表达</strong>：
+<ul>
+<li><strong>背诵</strong>将来可能用到的日语句子；</li>
+<li>必要时<strong>抄写</strong>好的表达，在以后写作中用进去。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="要领三练习替换说法言い換え"><a class="header" href="#要领三练习替换说法言い換え">要领三：练习"替换说法"（言い換え）</a></h3>
+<ul>
+<li>方法：在<strong>日本雅虎</strong>等搜索引擎输入「某词 + <strong>言い換え</strong>」。</li>
+<li>搜索结果中的表格非常有用——根据一个词的<strong>不同侧面</strong>，可以有多种替换说法。</li>
+<li>效果：既提高<strong>词汇量</strong>，又使表达更<strong>生动多彩</strong>。</li>
+<li>积累需要常年累月的时间。</li>
+</ul>
+<blockquote>
+<p>全套《从零开始学写日语作文》30+ 课到此结束。</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sakubun/02-shinkyu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../kogo/index-sec.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sakubun/02-shinkyu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../kogo/index-sec.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>06. 情态·敬语·文体 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html" class="active"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="情态敬语文体"><a class="header" href="#情态敬语文体">情态・敬语・文体</a></h1>
+<blockquote>
+<p>返回 <a href="index-sec.html">00. 总索引</a>
+覆盖：モダリティ（义务・认识・蓋然性）、邀请劝诱、传闻样态、命题与情态嵌套、两类谦让语、书面语、语法化。</p>
+</blockquote>
+<h2 id="必要义务-80"><a class="header" href="#必要义务-80">必要・义务　#80</a></h2>
+<h3 id="べきだ"><a class="header" href="#べきだ">べきだ</a></h3>
+<ul>
+<li>通常<strong>不能用于第一人称</strong>，但某些条件下可用</li>
+<li>汉语的"应该"在日语中有多种表述：なければならない／ないといけない／なくてはならない＝不得不做某事</li>
+<li><strong>说话者的义务</strong>：包括但不限于 ざるを得ない、ないわけにはいかない</li>
+<li><strong>听话者的义务</strong>：包括但不限于 べきだ</li>
+<li>べきだ若要用于第一人称（"我"应该做某事）→ 加 かもしれない、と思う（情态）；或 だった 等（包含后悔、反省的语气）</li>
+<li>ざるを得ない、ないわけにはいかない若用于第三人称 → 加推测情态（だろう、でしょう等）</li>
+</ul>
+<h3 id="必要性的隐含表达-59"><a class="header" href="#必要性的隐含表达-59">必要性的隐含表达　#59</a></h3>
+<p>即使无「必要がある」，语义中也可隐含必要性：</p>
+<ul>
+<li>漫画家になるには美術大学へ行く必要がありますか。→ 去掉「必要がある」也能暗示必要。</li>
+</ul>
+<h2 id="认识判断"><a class="header" href="#认识判断">认识判断</a></h2>
+<h3 id="と思う-11"><a class="header" href="#と思う-11">と思う　#11</a></h3>
+<ul>
+<li>第三人称需用持续体：
+<ul>
+<li>佐藤は、あの人が犯人だと<strong>思っている</strong>。（○）</li>
+<li>佐藤は、あの人が犯人だと<strong>思う</strong>。（✗）</li>
+</ul>
+</li>
+<li>没有时态标记的思う有人称限制（只能第一人称）；有时态标记后就没有人称限制：AはBと<strong>思った</strong>。是可以的</li>
+</ul>
+<h3 id="思う情态-vs-命题-65"><a class="header" href="#思う情态-vs-命题-65">思う：情态 vs 命题　#65</a></h3>
+<p><strong>情态表达</strong>（无独立时态/体，表对未知事情的判断，只能第一人称）：</p>
+<ul>
+<li>この本はきっと売れる<strong>と思う</strong>。（对未知事情的判断）</li>
+<li>たしか、あのときは、鈴木もそこにいた<strong>と思う</strong>。（某种不确定性）</li>
+<li>あの人は身勝手<strong>だと思う</strong>。（某个判断是说话人个人的主张）</li>
+</ul>
+<p><strong>知觉动词、情态动词的情态形式化</strong>：</p>
+<ul>
+<li>と＋知觉/情态动词可充当情态使用，而非命题的一部分</li>
+<li>这些动词都使用其本身，没有时态和体的标记；即使改成ます形式也仍是情态的一部分</li>
+<li>ようだ→と見える ／ だ＋そうだ→だ＋と聞く ／ だろう→と思う</li>
+</ul>
+<p><strong>命题动词</strong>（有完整活用，可接ている，表达持续认定/信念等）：</p>
+<ul>
+<li>私は彼が成功する<strong>と思っている</strong>。</li>
+<li>私は、鈴木は自分の妹<strong>だと思っている</strong>。（持续认定）</li>
+<li>と思った、と思っている也是思う本身的变化</li>
+<li>表达"持续信念/视为"→ 必须用思う动词本身（该动词本身就有"当作XX"的意思，且视为是持续状态）→ <strong>〜と思っている</strong></li>
+</ul>
+<p><strong>两种形式都能用的情况</strong>：①上述三种情态表达 ②表达说话人对事态的相信和期待——但と思う和と思っている意思不一样，需区分使用</p>
+<h3 id="蓋然性に違いない-vs-に決まっている-89"><a class="header" href="#蓋然性に違いない-vs-に決まっている-89">蓋然性：に違いない vs に決まっている　#89</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th>に違いない</th><th>に決まっている</th></tr></thead><tbody>
+<tr><td>确信依据</td><td>逻辑、证据</td><td>常识、显而易见</td></tr>
+<tr><td>语感</td><td>理性推断</td><td>强烈、当然</td></tr>
+<tr><td>用途</td><td>需推理得出</td><td>不言自明</td></tr>
+<tr><td>例</td><td>課長は最近怒りっぽい。ストレスがたまっている<strong>に違いない</strong>。</td><td>宝くじなんて当たらない<strong>に決まっている</strong>。</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>要表达带有强迫性的确认要求时，只能用 <strong>に決まっているではないか</strong>（简体＋ではない表惊讶、感叹、愤怒等）</li>
+</ul>
+<h2 id="推量传闻样态"><a class="header" href="#推量传闻样态">推量・传闻・样态</a></h2>
+<h3 id="だろう-vs-確か-92"><a class="header" href="#だろう-vs-確か-92">だろう vs 確か　#92</a></h3>
+<ul>
+<li><strong>だろう</strong>：①推测（未来/未知）②委婉断定/建议 ③确认/提醒（だろう？）④感慨推测（ことだろう／ことだろうか）</li>
+<li><strong>確か</strong>：
+<ul>
+<li>应与表示<strong>断定</strong>的情态一并使用</li>
+<li>基于记忆的模糊判断 → "大概没错"但不完全确定</li>
+<li><strong>不表示推测</strong></li>
+<li>不可与表示推测的だろう并用（不确定的来源不同）</li>
+<li>通常和と思う一起用，表达在记忆中寻找事实的过程</li>
+</ul>
+</li>
+</ul>
+<h3 id="伝聞そうだ-64"><a class="header" href="#伝聞そうだ-64">伝聞そうだ　#64</a></h3>
+<ul>
+<li>用途：从他人（第三者）那里得知的信息，经说话人传达给听话人</li>
+<li>限制：<strong>听话人比说话人更了解事实时不可用</strong>：×「君、引っ越したそうだ。」</li>
+<li>替代（确认/回忆表达）：…そうだ<strong>ね</strong>（确认）／…っけ？／…んだって？</li>
+</ul>
+<h3 id="样态そうだ的否定--否定句式语序语感-103"><a class="header" href="#样态そうだ的否定--否定句式语序语感-103">样态そうだ的否定 &amp; 否定句式语序语感　#103</a></h3>
+<ol>
+<li>助动词ない＋そうだ → 買わ<strong>なさ</strong>そうだ（规范写法、书面优先）。買わなそうだ理论上语法正确，但实际调查显示超半数日本人觉得语感别扭 → 要加上さ</li>
+<li>动词连用形＋そうもない／そうにない → 買い<strong>そうもない</strong>：字面"看样子不会…"，<strong>强调完全没有实现的可能、难度极大</strong>，语气更强</li>
+</ol>
+<ul>
+<li><strong>否定位置规律</strong>：否定成分位置不同，语气强度不同
+<ol>
+<li>否定置于句中：侧重单纯的否定推测、客观判断</li>
+<li>否定置于句末：强化说话人主观态度，更坚决强硬（"绝对不可能"）</li>
+<li>类比：はずがない 与 ないはずだ 也遵循此规律</li>
+</ol>
+</li>
+<li><strong>ではありません vs ではないです</strong>：
+<ol>
+<li>ではありません：礼貌形式＋否定，标准书面/正式礼貌体，正式场合首选</li>
+<li>ではないです：否定＋礼貌形式，非传统规范但现代口语普及度越来越高，更柔和亲切</li>
+<li>建议：日常交流优先「ではないです」更自然</li>
+</ol>
+</li>
+<li>补充：日语是黏着语，语序相对自由，但<strong>否定、句式结构的语序变化会直接改变语义语感</strong>；语法规则≠实际使用习惯</li>
+</ul>
+<h2 id="邀请劝诱-68"><a class="header" href="#邀请劝诱-68">邀请・劝诱　#68</a></h2>
+<h3 id="意志助动词うよう"><a class="header" href="#意志助动词うよう">意志助动词う／よう</a></h3>
+<ul>
+<li>表达自己意志：明日休<strong>もう</strong>。</li>
+<li>提议共同行动：一緒に行こ<strong>う</strong>。</li>
+<li>✗不宜直接「〜（よ）うか」邀请（即使是ましょうか也不行），显得不礼貌</li>
+</ul>
+<h3 id="礼貌表达"><a class="header" href="#礼貌表达">礼貌表达</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>句子</th><th>语义</th></tr></thead><tbody>
+<tr><td>映画に行き<strong>ませんか</strong></td><td>尊重听话人的意志（＝Won't you?）</td></tr>
+<tr><td>映画に行き<strong>ましょうか</strong></td><td>一切安排妥当的情况下才能用（＝Shall we?）</td></tr>
+<tr><td>映画に行き<strong>ましょう</strong></td><td>已经决定好的事情（＝Let's）</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>否定＋疑问可以表示单纯的反问</li>
+<li>为听话人做某事的情况下 → 用ましょうか</li>
+<li>直接回答对方的提问 → 用ましょう</li>
+</ul>
+<h2 id="文体语体"><a class="header" href="#文体语体">文体・语体</a></h2>
+<h3 id="语体统一原则-69"><a class="header" href="#语体统一原则-69">语体统一原则　#69</a></h3>
+<p>原则见 言語学習/日本語/从零开始学写日语作文/1. 基础#4. 文体：常体「だ・である」与敬体「です・ます」<strong>不可混用</strong>。</p>
+<p>打破原则的情况（文体的混交）：当引用的句子单独出现时，可以表示强调：</p>
+<pre><code>日々、受験勉強に追われています。
+勉強なんてしなくても、要領がよければ生きていける**のだ。**
+**そう**思って怠けていた時期を、今となっては後悔しています。
+</code></pre>
+<ul>
+<li>也可用格助词と（引用的一般形式）强行保持语体统一：勉強なんてしなくても、要領がよければ生きていけるのだ<strong>と</strong>思って怠けていた時期を、今となっては後悔しています。</li>
+<li>这样改会丢失强调意义、表达变得平庸，但非常保险</li>
+<li>后句用指示代词そう代指前文完整的一句话；引用句没有引号、没用と，而是用句号结句——即便如此也不丢失其引用句的本质</li>
+<li>如果前面的句子用ます・です结句，指示代词就会丢失引用的对象 → 需去掉前句表示礼貌的情态</li>
+</ul>
+<h3 id="引用"><a class="header" href="#引用">引用</a></h3>
+<ul>
+<li>です和ます一般只能出现在句末，不能出现在引用的部分当中</li>
+<li>引用的时候要站在一个中立的角度上进行</li>
+</ul>
+<h3 id="硬い文章-55"><a class="header" href="#硬い文章-55">硬い文章　#55</a></h3>
+<ul>
+<li>书面语和口语不同，应严格区分</li>
+<li>书面语应<strong>无视读者的存在</strong>，用客观的用词撰写</li>
+<li>正式的文章不需要表示礼貌：です、ます以及敬语相关的表达都不能出现</li>
+<li>请求读者做某事 → 使用てほしい或てもらいたい</li>
+</ul>
+<h2 id="敬语谦譲语的两大分类-98"><a class="header" href="#敬语谦譲语的两大分类-98">敬语：谦譲语的两大分类　#98</a></h2>
+<h3 id="1-谦譲語Ⅰ他者指向型自谦语"><a class="header" href="#1-谦譲語Ⅰ他者指向型自谦语">1. 谦譲語Ⅰ（他者指向型自谦语）</a></h3>
+<ul>
+<li>描述「我方」对<strong>对方/第三者</strong>的行为，通过压低自身动作，<strong>抬高动作指向对象的身份</strong></li>
+<li>典型：伺う、申し上げる、お目にかかる、差し上げる、お届けする、ご案内する…；（对尊长的）お手紙、ご説明…</li>
+</ul>
+<h3 id="2-谦譲語Ⅱ丁重語郑重语"><a class="header" href="#2-谦譲語Ⅱ丁重語郑重语">2. 谦譲語Ⅱ（丁重語/郑重语）</a></h3>
+<ul>
+<li>仅描述「我方」的行为/事物，对听话人表达郑重、礼貌，<strong>不抬高任何人</strong></li>
+<li>典型：参る、申す、いたす、おる…；拙著、小社…</li>
+</ul>
+<h3 id="例句辨析说话人社员听话人课长"><a class="header" href="#例句辨析说话人社员听话人课长">例句辨析（说话人＝社员，听话人＝课长）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>敬语类型</th><th>正误</th><th>说明</th></tr></thead><tbody>
+<tr><td>その件は、部長に<strong>ご説明しました</strong></td><td>Ⅰ</td><td>✅</td><td>抬高动作对象（部长），对课长汇报，逻辑正确</td></tr>
+<tr><td>その件は、部長に<strong>説明いたしました</strong></td><td>Ⅱ</td><td>✅</td><td>仅对听话人（课长）郑重，不抬高部长</td></tr>
+<tr><td>その件は、佐藤さんに<strong>ご説明しました</strong></td><td>Ⅰ</td><td>❌</td><td>强行抬高普通同事＝误用</td></tr>
+<tr><td>その件は、佐藤さんに<strong>説明いたしました</strong></td><td>Ⅱ</td><td>✅</td><td>不涉及抬高对象，对方是谁都可使用</td></tr>
+</tbody></table>
+</div>
+<h3 id="高频错误ご案内いたした的矛盾"><a class="header" href="#高频错误ご案内いたした的矛盾">高频错误：「ご案内いたした」的矛盾</a></h3>
+<ul>
+<li>✗先生を駅まで<strong>ご案内いたした</strong></li>
+<li>错误原因：①ご案内する是谦譲語Ⅰ，要抬高对象（先生）②いたす是谦譲語Ⅱ，仅郑重表达、本身不含敬意、且无礼貌体ます ③既想抬高对象、又不用礼貌体向听话人表敬意——逻辑矛盾</li>
+<li>正确：先生を駅まで<strong>ご案内しました</strong>（Ⅰ＋礼貌体）／先生を駅まで<strong>ご案内いたしました</strong>（Ⅰ＋Ⅱ）</li>
+</ul>
+<h3 id="关键规则"><a class="header" href="#关键规则">关键规则</a></h3>
+<ol>
+<li><strong>区分敬意指向</strong>：想抬高动作对象 → 谦譲語Ⅰ；仅对听话人郑重 → 谦譲語Ⅱ</li>
+<li><strong>禁止无意义抬高</strong>：谦譲語Ⅰ只能用于需要尊敬的对象，普通同事/平辈不可随意使用</li>
+<li><strong>礼貌体不可省略</strong>：向他人汇报/对话时，谦让语后必须搭配ます/です体</li>
+<li><strong>禁止两类混用矛盾</strong>：如「ご案内いたした」属于逻辑冲突的错误表达</li>
+</ol>
+<ul>
+<li>口诀：Ⅰ类抬对象，表敬意，用在尊长身上；Ⅱ类对听话人，表礼貌，谁都可以用；Ⅰ类乱抬是大忌，Ⅱ类无「ます」是硬伤。</li>
+</ul>
+<h2 id="命题与情态modality的嵌套-108"><a class="header" href="#命题与情态modality的嵌套-108">命题与情态（Modality）的嵌套　#108</a></h2>
+<h3 id="现象がの转换的边界"><a class="header" href="#现象がの转换的边界">现象：が・の转换的边界</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>句型</th><th>搭配A（使用が）</th><th>搭配B（替换为の）</th><th>自然度</th></tr></thead><tbody>
+<tr><td>定语从句</td><td>ここに私<strong>が</strong>いる場所はない</td><td>ここに私<strong>の</strong>いる場所はない</td><td><strong>两者均自然</strong></td></tr>
+<tr><td>情态句型</td><td>ここに私<strong>が</strong>いる必要はない</td><td>ここに私<strong>の</strong>いる必要はない</td><td><strong>④极其不自然</strong></td></tr>
+<tr><td>情态句型</td><td>客<strong>が</strong>来るはずがない</td><td>客<strong>の</strong>来るはずがない</td><td><strong>⑥错误/不自然</strong></td></tr>
+</tbody></table>
+</div>
+<h3 id="理论命题被情态包裹"><a class="header" href="#理论命题被情态包裹">理论：命题被情态包裹</a></h3>
+<ul>
+<li><strong>命题</strong>：句中承载<strong>客观事实、事态描述、可判断真伪</strong>的核心内容部分</li>
+<li><strong>情态（モダリティ）</strong>：说话人的主观判断、意志、评价、认识态度、概率推测</li>
+<li>结构关系：句子深层结构中，<strong>命题被外层的情态表现包裹</strong></li>
+</ul>
+<h3 id="机理解析"><a class="header" href="#机理解析">机理解析</a></h3>
+<ul>
+<li>「場所」是普通名词 →「ここに私がいる」是真正的<strong>定语从句</strong> → 普通定语从句内部が可转换为の</li>
+<li>「必要はない」「はずがない」<strong>不是普通名词，而是句子的情态表现</strong>：
+<ul>
+<li>必要はない＝对事态做"必要性与否"的主观评价：[命题：ここに私がいる] 被包裹于 [评价情态：〜必要はない]</li>
+<li>はずがない＝表概率/蓋然性的认识情态：[命题：客が来る] 被包裹于 [认识情态：〜はずがない]</li>
+</ul>
+</li>
+<li><strong>核心结论</strong>：情态表现的功能是为整个句子附加主观情态，而非作为普通名词被修饰 → 其前面的句子不是定语从句而是核心命题 → 主格が承担陈述事实的功能，<strong>绝不能转成表示修饰关系的の</strong></li>
+<li>补充（名词的复合属性）：はず在任何文脉下都不能单独作普通名词；但「必要」具有双重性（それは必要がない中可作普通名词）</li>
+</ul>
+<h3 id="方法论"><a class="header" href="#方法论">方法论</a></h3>
+<ul>
+<li><strong>语感（五感）</strong>：直觉性选择"哪种表达更自然"的工具和向导</li>
+<li><strong>语法（文法）</strong>：剖析"为什么这个自然、那个不自然"的底层逻辑和线索——两者相辅相成</li>
+<li>对成年学习者：语言学家搭建理论框架不是把语言复杂化；<strong>体系化语法知识能极大提升学习效率，是避免反复踩坑的终极捷径</strong></li>
+</ul>
+<h2 id="语法化grammaticalization-106"><a class="header" href="#语法化grammaticalization-106">语法化（Grammaticalization）　#106</a></h2>
+<h3 id="要る-vs-必要"><a class="header" href="#要る-vs-必要">「要る」 vs 「必要」</a></h3>
+<ul>
+<li>✗いじめを防ぐためには…一体となって取り組むことが<strong>要ります</strong></li>
+<li>○…取り組むことが<strong>必要です</strong>（あるいは、取り組む<strong>必要があります</strong>）</li>
+<li>「要る」的基本语法结构：<strong>[名词]が要る</strong>（被需要的事物作主语：お金が要る／時間が要る／準備が要る）——这些场景下与「お金が必要だ」几乎可互换</li>
+<li>「〜する必要がある／〜することが必要だ」已固化为表达"行为之必要性"的<strong>情态表达</strong></li>
+<li>结论：想修饰一个<strong>动作/行为</strong>时，不能硬套要る，必须用情态句型。<strong>词义相近，不代表语法功能对等。</strong></li>
+</ul>
+<h3 id="什么是语法化"><a class="header" href="#什么是语法化">什么是语法化</a></h3>
+<ul>
+<li><strong>实义词</strong>（有具体实在意义）在长期使用中逐渐演变为<strong>虚词/语法标记</strong>（时态、语态、情态等纯语法功能）的过程</li>
+<li>经典案例：英语 be going to
+<ol>
+<li>原初实义：go＝去/移动</li>
+<li>构式重复：be going to [do] 从"为了目的正在前往"发展出"打算做某事"</li>
+<li>彻底语法化：完全蜕变为代表"未来/预测"的时态/情态语法标记</li>
+<li>关键启示：被约定俗成固定下来的是<strong>特定构式</strong>；不能因 walk 和 go 意思相近，就把 be walking to 当作未来标记</li>
+</ol>
+</li>
+<li>方法论：不能仅因两个词"意思差不多"就在所有句型中随意替换；要把握<strong>各语法范畴中究竟存在哪些对应的具体表达</strong>；掌握文法的体系性至关重要</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ywh/05-fukubun.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ywh/07-shiten.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ywh/05-fukubun.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ywh/07-shiten.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

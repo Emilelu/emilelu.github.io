@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>发音技巧 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html" class="active"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="日语发音技巧笔记"><a class="header" href="#日语发音技巧笔记">日语发音技巧笔记</a></h1>
+<blockquote>
+<p>返回 00. 言語学習总索引
+来源：B站 <a href="https://space.bilibili.com/1153184680/">饭团君日语口语教室</a> 系列视频
+整理：2026-07-24　|　<strong>修订：2026-08-02</strong>（对照权威资料修正错误 + 删冗余保要点）</p>
+</blockquote>
+<hr />
+<h2 id="目录"><a class="header" href="#目录">目录</a></h2>
+<ul>
+<li><a href="#%E4%B8%80%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">一、基础概念</a></li>
+<li><a href="#%E4%BA%8C%E5%8D%95%E8%AF%8D%E9%87%8D%E9%9F%B3">二、单词重音</a></li>
+<li><a href="#%E4%B8%89%E9%9F%B3%E5%8F%98%E7%8E%B0%E8%B1%A1">三、音变现象</a></li>
+<li><a href="#%E5%9B%9B%E8%AF%AD%E8%B0%83%E4%B8%8E%E8%8A%82%E5%A5%8F">四、语调与节奏</a></li>
+<li><a href="#%E4%BA%94%E5%AE%9E%E7%94%A8%E5%8F%91%E9%9F%B3">五、实用发音</a></li>
+<li><a href="#%E5%85%AD%E9%87%8D%E9%9F%B3%E6%8A%80%E5%B7%A7">六、重音技巧</a></li>
+<li><a href="#%E9%99%84%E5%BD%95%E8%A7%86%E9%A2%91%E5%86%85%E5%AE%B9%E6%80%BB%E8%A7%88">附录：视频内容总览</a></li>
+</ul>
+<hr />
+<h2 id="一基础概念"><a class="header" href="#一基础概念">一、基础概念</a></h2>
+<h3 id="11-拍数モーラ计数规则"><a class="header" href="#11-拍数モーラ计数规则">1.1 拍数（モーラ）计数规则</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>假名类型</th><th>计数</th><th>示例</th></tr></thead><tbody>
+<tr><td>普通假名</td><td>1拍</td><td>あ、か、さ 等</td></tr>
+<tr><td>拗音（ゃゅょ）</td><td>与前面假名合计1拍</td><td>きゅ = 1拍</td></tr>
+<tr><td>长音（ー）</td><td>1拍</td><td>せ＋ー = <strong>2拍</strong>（ー单独1拍）</td></tr>
+<tr><td>促音（っ）</td><td>1拍</td><td>きっ = 2拍</td></tr>
+<tr><td>拨音（ん）</td><td>1拍</td><td>かん = 2拍</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 促音・长音・拨音各自独立算1拍，不要与前假名合并计数。</p>
+</blockquote>
+<h3 id="12-四种重音型アクセント型"><a class="header" href="#12-四种重音型アクセント型">1.2 四种重音型（アクセント型）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>重音型</th><th>标记</th><th>特征</th><th>示例（已验证）</th></tr></thead><tbody>
+<tr><td><strong>頭高型</strong></td><td>①</td><td>第1拍高，第2拍起下降</td><td>テレビ[1]、胡瓜（きゅうり）[1]</td></tr>
+<tr><td><strong>中高型</strong></td><td>②③④...</td><td>第1拍低，中间某拍高后下降</td><td>下さる（くださる）[3]、玉子（たまご）[2]</td></tr>
+<tr><td><strong>尾高型</strong></td><td>末拍</td><td>第1拍低，末拍高，接助词时下降</td><td>橋（はし）[2]（桥，区别于箸[1]筷子/端[0]平）、山（やま）[2]</td></tr>
+<tr><td><strong>平板型</strong></td><td>0</td><td>无下坠点，第2拍起保持高</td><td>テスト[0]、桜（さくら）[0]</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：「テスト」是<strong>平板型（0）</strong>，不是頭高型（原笔记误归）；頭高型示例改「テレビ[1]・きゅうり[1]」。中高型示例原「みんな（+が）」有歧义，改「玉子 たまご[2]・くださる[3]」。<strong>尾高型示例原「明後日・お母さん」均为中高型（误）</strong>，已改「橋（はし）[2]・山（やま）[2]」（含助词对比：橋が＝低高低）。平板型示例原「妹・先生」未逐词验证，改「桜（さくら）[0]」。</p>
+</blockquote>
+<h3 id="13-下坠点音の下がり目"><a class="header" href="#13-下坠点音の下がり目">1.3 下坠点（音の下がり目）</a></h3>
+<ul>
+<li>下坠点 = 音高从高突然降到低的位置；之前的假名是全词音高最高处</li>
+<li>每个单词最多 <strong>1个</strong> 下坠点</li>
+<li>下坠点 <strong>不会</strong> 出现在促音・长音・拨音之后</li>
+</ul>
+<h3 id="14-尾高型-vs-平板型区分法"><a class="header" href="#14-尾高型-vs-平板型区分法">1.4 尾高型 vs 平板型（区分法）</a></h3>
+<p>词后接助词「が」：</p>
+<ul>
+<li>助词<strong>下降</strong> → 尾高型</li>
+<li>助词<strong>不降</strong> → 平板型</li>
+</ul>
+<h3 id="15-第1拍与第2拍音高必异"><a class="header" href="#15-第1拍与第2拍音高必异">1.5 第1拍与第2拍音高必异</a></h3>
+<p>第1拍与第2拍音高一定不同（一高一低）。<strong>例外</strong>（首拍可不"拐"）：</p>
+<ul>
+<li>第2拍是「ん」时</li>
+<li>第2拍与第1拍组成长音时</li>
+</ul>
+<h3 id="16-下降模式"><a class="header" href="#16-下降模式">1.6 下降模式</a></h3>
+<ul>
+<li>重读假名带「ん」或长音时，两个音一起下降</li>
+<li>其他情况：先高后低的落差</li>
+</ul>
+<blockquote>
+<p>⚠️ 修正：日语音高重音是<strong>高⇄低的相对等级</strong>，<strong>不要用汉语四声类比</strong>（原笔记"发成拼音第四声"是错误类比）。</p>
+</blockquote>
+<hr />
+<h2 id="二单词重音"><a class="header" href="#二单词重音">二、单词重音</a></h2>
+<h3 id="21-名字不是姓的重音"><a class="header" href="#21-名字不是姓的重音">2.1 名字（不是姓）的重音</a></h3>
+<ul>
+<li>2个假名的名字：一般1调</li>
+<li>其他：一般 <strong>-3调</strong>（= 下坠点在倒数第3拍，NHK标记法）</li>
+<li>名字来源于动词：一般是平板型</li>
+<li>⚠️ <strong>名字アクセント地域差・個人差极大，具体人名（如「高橋 たかはし」）不能凭规则推断</strong>——需与本人确认或查 OJAD（此处仅示一般倾向，不列具体人名断言）</li>
+</ul>
+<h3 id="22-复合名词的重音"><a class="header" href="#22-复合名词的重音">2.2 复合名词的重音</a></h3>
+<blockquote>
+<p>⚠️ <strong>简化模型</strong>：複合名詞アクセント由<strong>后部要素</strong>决定（日本語教育能力検定試験標準），下表是常见词口诀，<strong>例外多，不确定的词请用 OJAD（東京大学アクセント辞典）逐词查询</strong>（https://www.gavo.t.u-tokyo.ac.jp/ojad/）。</p>
+</blockquote>
+<p><strong>口诀（按 NHK 放送文化研究所分类）：</strong></p>
+<ul>
+<li>后项1～2拍 → 核移到前项最后一拍（后项为尾高的部分词会平板化）</li>
+<li>后项3～4拍 → 头高・平板・尾高：核移到后项第一拍；中高：多数移到第一拍、少数保持（例外多）</li>
+<li>后项5拍以上 → 基本保持后项原调型</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>后项拍数</th><th>后项调型</th><th>规则</th><th>正确例子（Wiktionary 已验证）</th></tr></thead><tbody>
+<tr><td><strong>1～2拍</strong></td><td>一般</td><td>核在前项最后一拍</td><td>山（やま）＋川（かわ）→ 山川（や<strong>ま</strong>かわ）[2] 核在「ま」<br>山（やま）＋道（みち）→ 山道（や<strong>ま</strong>みち）[2] 核在「ま」</td></tr>
+<tr><td><strong>1～2拍</strong></td><td>尾高（部分）</td><td>平板化</td><td>花（はな）＋火（ひ）→ 花火（はなび）[0] 平板</td></tr>
+<tr><td><strong>3～4拍</strong></td><td>头高・平板・尾高</td><td>核移到后项<strong>第一拍</strong>（头高时核本就在第一拍，结果等于保持）</td><td>山（やま）＋桜（さくら）→ 山桜（やま<strong>ざ</strong>くら）[3]（桜[0]平板3拍，核移「ざ」）<br>新（しん）＋幹線（かんせん）→ 新幹線（しんか<strong>ん</strong>せん）[3]（幹線[0]平板4拍，核移「か」）<br>携帯（けいたい）＋電話（でんわ）→ 携帯電話（けいたいで<strong>ん</strong>わ）[5]（電話[0]平板3拍，核移「で」）</td></tr>
+<tr><td><strong>3～4拍</strong></td><td>中高</td><td>多数：核移到后项第一拍；部分：保持后项原核（<strong>例外多</strong>）</td><td>⚠️ 具体例请用 OJAD 逐词确认（NHK 分类例：后项一型 ~案内・~工場・~材料；后项保存 ~作物・~手続き）</td></tr>
+<tr><td><strong>5拍以上</strong></td><td>全部</td><td>保持后项原调型（后项保存）</td><td>電子（でんし）＋顕微鏡（けんびきょう）→ 電子顕微鏡（でんしけんびきょう）[0] 平板（顕微鏡[0]平板5拍，整体也平板）</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ <strong>原「世界遺産」例说明（修正）</strong>：世界遺産（せかい<strong>い</strong>さん）[4]中高、核在「い」——遺産[0]平板・<strong>3拍</strong>（い・さ・ん），複合後核落在后项第一拍「い」，属于<strong>第3行</strong>（后项平板→核移到后项第一拍）的机制，而非"5拍以上保持核"，故从第5行移除。</p>
+</blockquote>
+<h3 id="23-サ变动词重音する動詞"><a class="header" href="#23-サ变动词重音する動詞">2.3 サ变动词重音（する動詞）</a></h3>
+<ul>
+<li>する（字典形）= 平板；前项名词的重音保留，不因する改变</li>
+<li>例：工事（こうじ）頭高 → 工事する；手伝い（てつだい）中高 → 手伝いする；期待（きたい）平板 → 期待する</li>
+<li>短名词 + する：
+<ul>
+<li>1拍名词（如 科する かする）：重音在第1拍</li>
+<li>2拍名词：字典形平板，但 愛する・関する・有する（第2拍元音/长音）→ て形頭高（あいして）；察する・接する（第2拍促音）→ て形可頭高或平板</li>
+</ul>
+</li>
+<li>⚠️ サ変動詞活用形のアクセント例外多（简化模型），具体词请用 OJAD 逐词确认</li>
+</ul>
+<h3 id="24-形容词重音形容詞"><a class="header" href="#24-形容词重音形容詞">2.4 形容词重音（形容詞）</a></h3>
+<blockquote>
+<p>⚠️ <strong>简化模型</strong>：い形容詞学术上分 <strong>平板型・頭高型・中高型3类</strong>（例：赤い=平板、良い=頭高、白い=中高——<strong>日本語教育能力検定試験 過去問解説に基づく</strong>）。下表 A/B 二分是简化：A≈核在倒数第2拍（中高/頭高），B=平板。</p>
+</blockquote>
+<ul>
+<li><strong>A型</strong>（核在倒数第2拍，已验证）：青い（あおい）[2]、低い（ひくい）[2]、柔らかい（やわらかい）[4]</li>
+<li><strong>B型</strong>（平板）：赤い（あかい）[0]</li>
+<li>⚠️ 倒数第2拍为特殊拍（促/长/拗）时，核前移1拍</li>
+<li>⚠️ 活用形・复合形容词的具体调型请用 OJAD 逐词确认。原A型例「明るい（あかるい）」已移除——词典中 [0]平板 / [3]中高 / [4]尾高 <strong>三型并存</strong>（新明解・大辞林・NHK 各标注不同），不宜作单型示例</li>
+</ul>
+<h3 id="25-动词重音動詞"><a class="header" href="#25-动词重音動詞">2.5 动词重音（動詞）</a></h3>
+<blockquote>
+<p>⚠️ <strong>简化模型</strong>：動詞学术上分 <strong>平板型・頭高型・中高型3类</strong>（例：泣く=平板、読む=頭高、起きる=中高——<strong>日本語教育能力検定試験 過去問解説に基づく</strong>）。下表 A/B 二分是简化：A≈核在倒数第2拍，B=平板。</p>
+</blockquote>
+<ul>
+<li><strong>A型</strong>（核在倒数第2拍，已验证）：読む（よむ）[1]頭高、食べる（たべる）[2]、話す（はなす）[2]、疲れる（つかれる）[3]</li>
+<li><strong>B型</strong>（平板）：無重音（例：泣く なく[0]平板——日本語教育能力検定試験過去問解説）</li>
+<li>⚠️ 倒数第2拍为特殊拍（促/长/拗）时核前移：如 通る（とおる）——倒数第2拍为长音「お」，核前移至第1拍「と」（[1]頭高）。※原例「帰る かえる」已移除：其倒数第2拍「え」非特殊拍，[1]头高另有原因，不作核前移例</li>
+</ul>
+<p><strong>活用形规则（修正后）：</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>活用形</th><th>A型（起伏）</th><th>B型（平板）</th></tr></thead><tbody>
+<tr><td>ない形</td><td>核在「ない」直前</td><td>「ない」2字都高</td></tr>
+<tr><td>て/た形</td><td>起伏[1]号：保持原核；其他：含て/た往前数第3拍</td><td><strong>平板延续</strong>（第1拍低，其余含て/た都高，无下坠）</td></tr>
+<tr><td>ます形</td><td>重音在「ま」（ま高・す低）</td><td>同左（所有动词通用）</td></tr>
+<tr><td>其他形</td><td>核在倒数第2拍</td><td>平板</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：原笔记"平板型た形＝た紧前方（唯一有重音）"<strong>错误</strong>——平板动词的て/た形保持平板（例：行った いった=低高高，无下坠）；"ます形紧前方"<strong>错误</strong>——ます形重音一律在「ま」上（た/ます形两行已对照词典验证）。其余活用形（ない形・其他形）为简化模型，具体活用形的调型请用 OJAD 确认。</p>
+</blockquote>
+<h3 id="26-复合动词複合動詞"><a class="header" href="#26-复合动词複合動詞">2.6 复合动词（複合動詞）</a></h3>
+<p>核几乎都在复合词倒数第2拍（即使后项原为平板）：話し疲れる（はなしつかれる）、食べ続ける（たべつづける）、歌い終わる（うたいおわる）、逃げ帰る（にげかえる）</p>
+<blockquote>
+<p>⚠️ 各复合动词的具体调型请用 OJAD 逐词确认（此处仅示读音，读音已核实正确）。</p>
+</blockquote>
+<hr />
+<h2 id="三音变现象音韻変化"><a class="header" href="#三音变现象音韻変化">三、音变现象（音韻変化）</a></h2>
+<blockquote>
+<p>音变都为了使发音更流畅。</p>
+</blockquote>
+<h3 id="31-連濁浊音化"><a class="header" href="#31-連濁浊音化">3.1 連濁（浊音化）</a></h3>
+<p>后项词头清音（か/さ/た/は行）→ 浊音（が/ざ/だ/ば行）。</p>
+<p><strong>易发生：</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>组合</th><th>示例</th></tr></thead><tbody>
+<tr><td>和語＋和語</td><td>貝殻（かいがら）、長靴（ながぐつ）、夜空（よぞら）、巻き寿司（まきずし）、鼻血（はなじ）</td></tr>
+<tr><td>漢語＋和語</td><td>台所（だいどころ）、茶畑（ちゃばたけ）、煎餅（せんべい）</td></tr>
+<tr><td>外来語＋和語</td><td>スナック菓子、サラダ皿、スイーツどころ、キャベツ畑</td></tr>
+</tbody></table>
+</div>
+<p><strong>不发生：</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>情况</th><th>示例</th></tr></thead><tbody>
+<tr><td>后项词头已有浊音</td><td>花束（はなたば）</td></tr>
+<tr><td>并列构造</td><td>好き嫌い、山川（やまかわ）、押し引き、嬉し悲しい</td></tr>
+<tr><td>后项为漢語</td><td>歌舞伎、畑仕事、家賃手帳、手本見本</td></tr>
+<tr><td>后项为外来語</td><td>グローバル化、ヒット作、サービス単価、リサイクル品</td></tr>
+</tbody></table>
+</div>
+<p><strong>例外（后项漢語但发生連濁）：</strong> 湯気（ゆげ）、足し算（たしざん）、登山（とざん）</p>
+<h3 id="32-母音変化元音变化"><a class="header" href="#32-母音変化元音变化">3.2 母音変化（元音变化）</a></h3>
+<p>前项词尾元音变为更易发音的元音。</p>
+<div class="table-wrapper"><table><thead><tr><th>变化</th><th>示例</th></tr></thead><tbody>
+<tr><td>え→あ</td><td>酒（さけ）＋屋（や）→ 酒屋（さ<strong>か</strong>や）</td></tr>
+<tr><td>お→あ</td><td>白（しろ）＋玉（たま）→ 白玉（しら<strong>た</strong>ま）</td></tr>
+<tr><td>い→お</td><td>木（き）＋陰（かげ）→ 木陰（こ<strong>か</strong>げ）</td></tr>
+</tbody></table>
+</div>
+<h3 id="33-促音化"><a class="header" href="#33-促音化">3.3 促音化</a></h3>
+<p>前项词尾（く/ち/き/し）＋后项词头（か/さ/た/は行清音）→ 前项词尾变促音（っ）。</p>
+<div class="table-wrapper"><table><thead><tr><th>前项＋后项</th><th>结果</th></tr></thead><tbody>
+<tr><td>学（がく）＋校（こう）</td><td>学校（がっ<strong>こ</strong>う）</td></tr>
+<tr><td>決（けつ）＋定（てい）</td><td>決定（けっ<strong>て</strong>い）</td></tr>
+<tr><td>一（いち）＋定（てい）</td><td>一定（いっ<strong>て</strong>い）</td></tr>
+<tr><td>石（せき）＋鹸（けん）</td><td>石鹸（せっ<strong>け</strong>ん）</td></tr>
+<tr><td>圧（あつ）＋巻（かん）</td><td>圧巻（あっ<strong>か</strong>ん）</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：原笔记"がく＋て→がって"是错误示例（がくて不是词），已改「学校 がっこう」。</p>
+</blockquote>
+<h3 id="34-半濁音化"><a class="header" href="#34-半濁音化">3.4 半濁音化</a></h3>
+<p>后项词头「は行」→「ぱ行」，常与促音化同时发生。</p>
+<div class="table-wrapper"><table><thead><tr><th>组合</th><th>结果</th></tr></thead><tbody>
+<tr><td>一（いち）＋匹（ひき）</td><td>一匹（いっ<strong>ぴ</strong>き）</td></tr>
+<tr><td>出（しゅつ）＋発（はつ）</td><td>出発（しゅっ<strong>ぱ</strong>つ）</td></tr>
+<tr><td>扇（せん）＋風（ふう）＋機（き）</td><td>扇風機（せん<strong>ぷ</strong>うき）（ふ→ぷ）</td></tr>
+<tr><td>六（ろく）＋本（ほん）</td><td>6本（ろっ<strong>ぽ</strong>ん）</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：原表「裁（し）＋判（はん）→裁判（しっぱん）」<strong>完全错误</strong>——裁判（さいばん）不发生促音化・半浊音化（さい＋はん，读音不变）。已改为正确半浊音化例「一匹 いっぴき（いち＋ひき，ち→っ・ひ→ぴ）」；「扇風機」原写法"風機（ぷうき）"不存在该词，已改为「扇＋風＋機」（ふ→ぷ）。</p>
+</blockquote>
+<h3 id="35-音韻転換插入音"><a class="header" href="#35-音韻転換插入音">3.5 音韻転換（插入音）</a></h3>
+<p>后项词头前插入「ん」或「っ」。</p>
+<div class="table-wrapper"><table><thead><tr><th>组合</th><th>结果</th><th>插入</th></tr></thead><tbody>
+<tr><td>小（こ）＋雨（あめ）</td><td>小雨（こ<strong>さ</strong>め）</td><td>さ（雨 あめ→さめ）</td></tr>
+<tr><td>真（ま）＋白（しろ）</td><td>真っ白（まっ<strong>し</strong>ろ）</td><td>っ</td></tr>
+<tr><td>真（ま）＋中（なか）</td><td>真ん中（ま<strong>ん</strong>なか）</td><td>っ→ん</td></tr>
+<tr><td>真（ま）＋直ぐ（すぐ）</td><td>真っ直ぐ（まっ<strong>す</strong>ぐ）</td><td>っ</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：原笔记"しょう＋あめ（小雨）→こんさめ"<strong>严重错误</strong>——小雨 = <strong>こさめ</strong>（无「ん」）。「雨」在复合词末尾读「さめ」：霧雨（きりさめ）、春雨（はるさめ）、小雨（こさめ）同类。</p>
+</blockquote>
+<h3 id="36-音韻脱落"><a class="header" href="#36-音韻脱落">3.6 音韻脱落</a></h3>
+<p>部分音消失。</p>
+<div class="table-wrapper"><table><thead><tr><th>组合</th><th>结果</th><th>脱落</th></tr></thead><tbody>
+<tr><td>河（かわ）＋原（はら）</td><td>河原（かわ<strong>ら</strong>）</td><td>は</td></tr>
+</tbody></table>
+</div>
+<h3 id="37-音韻融合"><a class="header" href="#37-音韻融合">3.7 音韻融合</a></h3>
+<p>常见于漢語：前项以「ん/つ」结尾＋后项以元音/や行/わ行开头 → 后项词头变な行/ま行。</p>
+<div class="table-wrapper"><table><thead><tr><th>组合</th><th>结果</th><th>变化</th></tr></thead><tbody>
+<tr><td>反（はん）＋応（おう）</td><td>反応（は<strong>んの</strong>う）</td><td>お→の</td></tr>
+<tr><td>銀（ぎん）＋杏（あん）</td><td>銀杏（ぎ<strong>んな</strong>ん）</td><td>あ→な</td></tr>
+<tr><td>因（いん）＋縁（えん）</td><td>因縁（い<strong>んね</strong>ん）</td><td>え→ね</td></tr>
+<tr><td>素（す）＋人（ひと）</td><td>素人（し<strong>ろう</strong>と）</td><td>融合</td></tr>
+</tbody></table>
+</div>
+<h3 id="38-音变练习36例精选含修正"><a class="header" href="#38-音变练习36例精选含修正">3.8 音变练习（36例精选，含修正）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>词组</th><th>类型</th><th>说明</th></tr></thead><tbody>
+<tr><td>花火（はなび）</td><td>連濁</td><td>ひ→び</td></tr>
+<tr><td>月見酒（つきみざけ）</td><td>連濁</td><td>さけ→ざけ</td></tr>
+<tr><td>額縁（がくぶち）</td><td>連濁</td><td>ふち→ぶち</td></tr>
+<tr><td>ビニール袋（ぶくろ）</td><td>連濁</td><td>ふくろ→ぶくろ</td></tr>
+<tr><td>品数（しなかず）</td><td>連濁なし</td><td>かず已有浊音</td></tr>
+<tr><td>駆け引き（かけひき）</td><td>連濁なし</td><td>并列构造</td></tr>
+<tr><td>梅酒（うめしゅ）</td><td>連濁なし</td><td>后项漢語</td></tr>
+<tr><td>夕刊（ゆうかん）</td><td>連濁なし</td><td>漢語＋漢語</td></tr>
+<tr><td>湯気（ゆげ）</td><td>連濁（例外）</td><td>后项漢語但发生</td></tr>
+<tr><td>隣国（りんごく）</td><td>連濁</td><td>ん前发生</td></tr>
+<tr><td>上着（うわぎ）</td><td>連濁＋母音変化</td><td>き→ぎ＋え→わ</td></tr>
+<tr><td>金槌（かなづち）</td><td>連濁</td><td>つち→づち（仅連濁）</td></tr>
+<tr><td>木陰（こかげ）</td><td>母音変化＋連濁なし</td><td>き→こ；げ已是浊音故无連濁</td></tr>
+<tr><td>胸倉（むなぐら）</td><td>連濁</td><td>くら→ぐら</td></tr>
+<tr><td>楽観（らっかん）</td><td>促音化</td><td>く＋かん→っかん</td></tr>
+<tr><td>一通（いっつう）</td><td>促音化</td><td>いち＋つう→いっつう</td></tr>
+<tr><td>接点（せってん）</td><td>促音化</td><td>せつ＋てん→せってん</td></tr>
+<tr><td>先方（せんぽう）</td><td>半濁音化</td><td>は→ぱ</td></tr>
+<tr><td>扇風機（せんぷうき）</td><td>半濁音化</td><td>ふ→ぷ</td></tr>
+<tr><td>春雨（はるさめ）</td><td>挿入音（-s-）</td><td>はる＋あめ→はるさめ</td></tr>
+<tr><td>真っ直ぐ（まっすぐ）</td><td>音韻転換</td><td>插入っ</td></tr>
+<tr><td>真ん中（まんなか）</td><td>音韻転換</td><td>插入っ→ん</td></tr>
+<tr><td>河原（かわら）</td><td>音韻脱落</td><td>は消失</td></tr>
+<tr><td>素人（しろうと）</td><td>音韻融合</td><td>す＋ひと→しろうと</td></tr>
+<tr><td>反応（はんのう）</td><td>音韻融合</td><td>お→の</td></tr>
+<tr><td>銀杏（ぎんなん）</td><td>音韻融合</td><td>あ→な</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>⚠️ 修正：①木陰＝母音変化（き→こ）＋連濁なし，非"音韻転換" ②春雨＝**挿入音（-s-）**非"插入ん"，且平板型[0] ③金槌＝仅連濁，无母音変化。</p>
+</blockquote>
+<hr />
+<h2 id="四语调与节奏"><a class="header" href="#四语调与节奏">四、语调与节奏</a></h2>
+<h3 id="41-日语节奏リズムまとまり朗读法"><a class="header" href="#41-日语节奏リズムまとまり朗读法">4.1 日语节奏（リズム）——まとまり朗读法</a></h3>
+<p>日语的自然感来自<strong>节奏</strong>而非机械音拍：把句子分成「まとまり」（意义组），组内无间隙、组间有停顿。</p>
+<blockquote>
+<p>❌ 机械：ご→ざ→い→ま→す　✅ 节奏：【ござ】い【ます】</p>
+</blockquote>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>汉字转平假名，长音标「ー」（先生→せんせー）</li>
+<li>按文节划分（先生に／おこられて／しまった）</li>
+<li>圈出促音・长音・拨音＋前假名</li>
+<li>圈出句末「です」「ます」「を」</li>
+<li>剩余假名两两成组</li>
+<li>每组作为一个まとまり朗读</li>
+</ol>
+<p><strong>练习例：</strong> いってきます→【いっ】【て】【きます】；さようなら→【さよー】【なら】</p>
+<h3 id="42-语调基础イントネーション"><a class="header" href="#42-语调基础イントネーション">4.2 语调基础（イントネーション）</a></h3>
+<p><strong>三要素：</strong> 单词重音（词内音高）、强调（提高重点词）、说话意图（疑问/同意/惊讶）。</p>
+<p><strong>「山」形语调：</strong> 每个まとまり有且仅有1个音高「山」（低→高→低）；同一块内多个重音核时，第一个核标记山的结束，后续核仅平缓下降。</p>
+<ul>
+<li>山的形状取决于首词重音：平板→第1拍低第2拍高（缓升）；頭高→第1拍高（高处下降）</li>
+<li>疑问句：句末音高上升</li>
+<li>常见错误：一个まとまり内造太多小山（❌ ひとりで／ご飯を／食べに／行く → ✅ 一个大山平缓下降）</li>
+</ul>
+<blockquote>
+<p>日语听起来「平」，是因为下降是渐进的而非突然的。</p>
+</blockquote>
+<h3 id="43-强调的表达強調"><a class="header" href="#43-强调的表达強調">4.3 强调的表达（強調）</a></h3>
+<p><strong>核心：提高音高</strong>。想强调的词用明显更高的音高发音；辅助手段：降低周围词、强调词前后停顿、放慢语速。</p>
+<p><strong>步骤：</strong> 划分まとまり → 构建山形 → 提高重点词的音高。
+例：「母は<strong>明日</strong>、東京駅に兄を迎えに行きます。」强调「明日」时该词音高明显提高。</p>
+<blockquote>
+<p>⚠️ 无意的音高上升会被听成强调，注意控制。</p>
+</blockquote>
+<h3 id="44-意图与读法発話の意図"><a class="header" href="#44-意图与读法発話の意図">4.4 意图与读法（発話の意図）</a></h3>
+<p>同一句子不同语调 = 不同含义（例：「いいよ」了解/拒绝/评价的语调不同：了解时两「い」音高差小、「よ」略升；拒绝时差大、「よ」略降）。</p>
+<p><strong>句型与语调：</strong> 陈述=句末词较高；感叹=情感词音高大升；疑问=句末上升。</p>
+<hr />
+<h2 id="五实用发音"><a class="header" href="#五实用发音">五、实用发音</a></h2>
+<h3 id="51-回应与附和返事相槌"><a class="header" href="#51-回应与附和返事相槌">5.1 回应与附和（返事・相槌）</a></h3>
+<p><strong>日常（对平辈）：</strong> 肯定 うん／疑问 うん？（升调）／否定 ううん（降调强调）</p>
+<p><strong>礼貌（对长辈/上级）：</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>功能</th><th>发音</th><th>说明</th></tr></thead><tbody>
+<tr><td>肯定</td><td>はい</td><td>⚠️ 不要重复「はいはい」（失礼）</td></tr>
+<tr><td>疑问</td><td>はい？（升调）</td><td>相当于「能再说一遍吗？」</td></tr>
+<tr><td>犹豫</td><td>えぇ／えぇと</td><td>不如「はい」礼貌</td></tr>
+<tr><td>否定</td><td>いえ</td><td>短促轻声，比「いいえ」谦逊</td></tr>
+<tr><td>谦逊</td><td>いえ、いえ</td><td>回应赞美「没什么大不了的」</td></tr>
+</tbody></table>
+</div>
+<h3 id="52-英语片假名外来語"><a class="header" href="#52-英语片假名外来語">5.2 英语→片假名（外来語）</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>规则</th><th>示例</th></tr></thead><tbody>
+<tr><td>Magic E（词尾e使前元音长音）</td><td>ice→アイス、size→サイズ、cake→ケーキ</td></tr>
+<tr><td>双写辅音→促音</td><td>happy→ハッピー、book→ブック、egg→エッグ</td></tr>
+<tr><td>-er结尾→アー</td><td>mister→ミスター、sister→シスター</td></tr>
+<tr><td>双元音→长音</td><td>tree→ツリー、room→ルーム、school→スクール</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>片假名基于<strong>英语发音</strong>而非拼写；例外多（green→グリーン不加促音）；建议逐个记忆而非推测。</p>
+</blockquote>
+<h3 id="53-电话号码读法電話番号"><a class="header" href="#53-电话号码读法電話番号">5.3 电话号码读法（電話番号）</a></h3>
+<p><strong>数字：</strong> 4 よん（不用し）、7 なな（不用しち）、9 きゅう（不用く）；0 ゼロ／まる。
+<strong>读法：</strong> 按连字符分组逐个读；连字符可读「の」（例：03-1234 → ゼロ さん の いち に さん よん）。
+<strong>号段：</strong> 固定 03/06；手机 090/080/070（060 総務省规划导入中，启用时间未定）；IP 050；免费 0120/0800。</p>
+<blockquote>
+<p>⚠️ 标注：原笔记"每组最后一位頭高型、奇数位平板/偶数位頭高"的<strong>重音规则不存在</strong>——电话号读法无官方アクセント规则，逐字自然读即可（口诀仅作记忆辅助）。</p>
+</blockquote>
+<hr />
+<h2 id="六重音技巧"><a class="header" href="#六重音技巧">六、重音技巧</a></h2>
+<h3 id="61-听重音的技巧"><a class="header" href="#61-听重音的技巧">6.1 听重音的技巧</a></h3>
+<p>找下坠点（最多1个；不在促/长/拨音后）。长单词可逐处尝试降调定位。
+练习例：さくら吹雪 → 在 さくら／吹雪／桜吹雪 各处试降。</p>
+<h3 id="62-发重音的技巧钢琴体感法"><a class="header" href="#62-发重音的技巧钢琴体感法">6.2 发重音的技巧——钢琴体感法</a></h3>
+<p>想象身体里有架竖立钢琴：低音=喉咙位置、高音=鼻子位置；下坠点处想象弹下低音键。触觉辅助：发低音摸喉咙、发高音摸鼻子。</p>
+<h3 id="63-发音注意"><a class="header" href="#63-发音注意">6.3 发音注意</a></h3>
+<ol>
+<li>不要过度强调下坠点前的假名（如 かたつむり 不要把「か」发太强）</li>
+<li>单词中途腹部不要突然绷紧</li>
+<li>面部保持正面固定（下巴不上抬、脸不侧滑）</li>
+</ol>
+<hr />
+<h2 id="附录视频内容总览"><a class="header" href="#附录视频内容总览">附录：视频内容总览</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>#</th><th>主题</th><th>核心内容</th></tr></thead><tbody>
+<tr><td>1</td><td>单词重音基础</td><td>4种重音型、下坠点、拍数计算</td></tr>
+<tr><td>2</td><td>重音技巧</td><td>听/发重音技巧、钢琴体感法</td></tr>
+<tr><td>3</td><td>音变现象</td><td>8种音变详解</td></tr>
+<tr><td>4</td><td>音变练习</td><td>36个练习例词</td></tr>
+<tr><td>5</td><td>回应与附和</td><td>うん/ううん/はい/いえ 实际发音</td></tr>
+<tr><td>6</td><td>サ变动词重音</td><td>する動詞重音规则</td></tr>
+<tr><td>7</td><td>英语→片假名</td><td>外来語转换规则</td></tr>
+<tr><td>8</td><td>强调的表达</td><td>高音表强调、语调技巧</td></tr>
+<tr><td>9</td><td>语调基础</td><td>语调三要素、山形语调</td></tr>
+<tr><td>10</td><td>单词重音与chunk</td><td>まとまり与山型语调</td></tr>
+<tr><td>11</td><td>意图与读法</td><td>同一句子不同语调不同含义</td></tr>
+<tr><td>12</td><td>电话号码读法</td><td>数字读法、重音规则</td></tr>
+<tr><td>13</td><td>形容词重音</td><td>2种原型、活用规则</td></tr>
+<tr><td>14</td><td>动词活用与复合动词重音</td><td>2种原型、活用形规则（原标题笔误已修）</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../oyou/01-kaiwa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../oyou/01-kaiwa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

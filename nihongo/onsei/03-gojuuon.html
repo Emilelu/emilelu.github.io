@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>03. 五十音与发音体系 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html" class="active"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="五十音与发音体系日语语音"><a class="header" href="#五十音与发音体系日语语音">五十音与发音体系（日语语音）</a></h1>
+<blockquote>
+<p>返回 <a href="index-sec.html">00. 总索引（日语语音）</a>
+来源：B站 日语翻译小昊子【日语语音】合集 #1（BV1kF41197qN，16:52，中文讲解）。</p>
+</blockquote>
+<h2 id="一音拍モーラ日语的节奏单位"><a class="header" href="#一音拍モーラ日语的节奏单位">一、音拍（モーラ）：日语的节奏单位</a></h2>
+<ul>
+<li>汉语以<strong>音节</strong>为发音单位；日语以<strong>音拍</strong>为单位。</li>
+<li>例：一个词中国人听成 4 个音，实际由 <strong>8 个音拍</strong>组成（促音、拨音等都算独立音拍）。</li>
+<li><strong>促音虽不发音，在日本人的认知里也是一个独立音拍。</strong></li>
+<li>日语地不地道，<strong>关键在于把握每个音拍的等时性</strong>。</li>
+<li>除拗音外，一个假名 = 一个音拍，时间上等长。</li>
+</ul>
+<h2 id="二元音只有-5-个且只有单元音"><a class="header" href="#二元音只有-5-个且只有单元音">二、元音（只有 5 个，且只有单元音）</a></h2>
+<p>元音＝呼出气流时<strong>不</strong>被任何发音器官阻挡而发出的音。按"开口度（上下）× 舌位前后（左右）"排列，右侧为圆唇音。</p>
+<div class="table-wrapper"><table><thead><tr><th>元音</th><th>要点</th></tr></thead><tbody>
+<tr><td><strong>a</strong></td><td>自然张开，<strong>不收圆</strong>（类似"加"的最后部分）</td></tr>
+<tr><td><strong>i</strong></td><td>类似"衣"，但<strong>嘴唇放松</strong>，不像汉语那样向左右裂开</td></tr>
+<tr><td><strong>u</strong></td><td>与汉语差别大：<strong>嘴唇不收圆、放松</strong>（不要像汉语 u 那样收圆紧张）</td></tr>
+<tr><td><strong>e</strong></td><td>张开程度比 a 小；普通话除语气词外很少单独出现</td></tr>
+<tr><td><strong>o</strong></td><td>日语<strong>唯一的圆唇元音</strong>，自然收圆即可</td></tr>
+</tbody></table>
+</div>
+<h2 id="三调音点发音部位只用-7-处"><a class="header" href="#三调音点发音部位只用-7-处">三、调音点（发音部位）：只用 7 处</a></h2>
+<p><strong>嘴唇・齿茎・齿茎后・硬腭・软腭・小舌・声门</strong></p>
+<h2 id="四调音法发音方法也只有-7-种"><a class="header" href="#四调音法发音方法也只有-7-种">四、调音法（发音方法）：也只有 7 种</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>方法</th><th>说明</th><th>例</th></tr></thead><tbody>
+<tr><td>破裂音</td><td>完全堵住后突然释放</td><td>か／た／ぱ 行</td></tr>
+<tr><td>摩擦音</td><td>收窄通路让气流摩擦出去</td><td>さ 行</td></tr>
+<tr><td>接近音（半元音）</td><td>两个发音部位靠近</td><td>や 行</td></tr>
+<tr><td>破擦音</td><td>破裂 + 摩擦</td><td>ざ／た 行的「ち・つ」</td></tr>
+<tr><td>弹舌音</td><td>弹动舌头</td><td>ら 行</td></tr>
+<tr><td>颤音</td><td>多用于震慑，一般男性使用</td><td>（ら 行的特殊读法）</td></tr>
+<tr><td>鼻音</td><td>堵住口腔，气流从鼻腔出</td><td>ま／な 行</td></tr>
+</tbody></table>
+</div>
+<h2 id="五清音-vs-浊音靠声带振动"><a class="header" href="#五清音-vs-浊音靠声带振动">五、清音 vs 浊音：靠<strong>声带振动</strong></a></h2>
+<ul>
+<li>汉语靠<strong>送气／不送气</strong>区分意义；日语靠<strong>发辅音时声带是否振动</strong>区分。
+<ul>
+<li>发 k 声带不振动，发 g 声带振动 → <strong>直接改变词义</strong>。</li>
+</ul>
+</li>
+<li>中国人容易把<strong>清音听成／发成浊音</strong>，需特别注意。</li>
+</ul>
+<h2 id="六各行发音要点"><a class="header" href="#六各行发音要点">六、各行发音要点</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>行</th><th>要点</th></tr></thead><tbody>
+<tr><td><strong>カ行</strong></td><td>软腭破裂音；「き」受 i 影响发音部位移到<strong>硬腭</strong>（腭化）；声带振动 → ガ行</td></tr>
+<tr><td><strong>ガ行鼻濁音</strong></td><td>保持口型，用舌头堵住口腔通路让气流从鼻腔出；<strong>不出现在词头</strong>，现在使用者渐少</td></tr>
+<tr><td><strong>サ行</strong></td><td>摩擦音（舌与齿茎）；受 i 影响现代日语不发 si 而发 <strong>shi</strong>；「す」受 u 影响</td></tr>
+<tr><td><strong>ザ行</strong></td><td>摩擦→破擦；受 i 影响发 <strong>ji</strong></td></tr>
+<tr><td><strong>タ行</strong></td><td>保持ザ行舌位但不破擦、声带不振动；受 i 影响发 <strong>chi</strong>，受 u 影响发 <strong>tsu</strong></td></tr>
+<tr><td><strong>ダ行</strong></td><td>声带振动；现代日语「<strong>ぢ</strong>」与「<strong>じ</strong>」发音相同</td></tr>
+<tr><td><strong>ナ行</strong></td><td>鼻音，气流从鼻腔出；「に」发音部位移到硬腭</td></tr>
+<tr><td><strong>ハ行</strong>（特殊）</td><td>は・へ・ほ＝<strong>声门摩擦音</strong>；ひ＝<strong>硬腭摩擦音</strong>（抬高舌头）；ふ＝<strong>双唇摩擦音</strong>（上下唇接近摩擦）</td></tr>
+<tr><td><strong>パ行</strong></td><td>双唇破裂音；「ぴ」舌接近硬腭</td></tr>
+<tr><td><strong>バ行</strong></td><td>保持パ行口型 + 声带振动</td></tr>
+<tr><td><strong>マ行</strong></td><td>双唇鼻音</td></tr>
+<tr><td><strong>ラ行</strong></td><td>舌头轻弹齿茎（弹舌音），<strong>普通话无此音</strong>，有难度</td></tr>
+<tr><td><strong>ヤ行</strong></td><td>半元音（接近音），抬舌接近硬腭</td></tr>
+<tr><td><strong>ワ行</strong></td><td>只有「わ」；现代日语中「<strong>を</strong>」的发音与元音「お」<strong>完全相同</strong></td></tr>
+</tbody></table>
+</div>
+<h2 id="七拗音"><a class="header" href="#七拗音">七、拗音</a></h2>
+<ul>
+<li>通过半元音 i 连接 a／u／o 发出（きゃ・きゅ・きょ 等）。</li>
+<li><strong>一个拗音＝一拍</strong>（虽由大假名 + 小假名构成，但发音是一拍不是两拍）。</li>
+</ul>
+<h2 id="八特殊拍长音拨音促音"><a class="header" href="#八特殊拍长音拨音促音">八、特殊拍：长音・拨音・促音</a></h2>
+<h3 id="长音"><a class="header" href="#长音">长音</a></h3>
+<ul>
+<li>元音拉长一拍；<strong>拉长后词义改变</strong>。</li>
+<li>标记：あいう段长音用 あ／い／う；えお段长音除个别词外用 い／う；<strong>片假名长音统一用「ー」</strong>。</li>
+<li>例：おばさん（阿姨）／おばあさん（奶奶）；くき（茎）／くうき（空気）；せき（席）／せいき（世紀）；ここ／こうこう（高校）
+→ <strong>元音长短一定要注意</strong>。</li>
+</ul>
+<h3 id="拨音ん有逆同化"><a class="header" href="#拨音ん有逆同化">拨音「ん」——有<strong>逆同化</strong></a></h3>
+<ul>
+<li>发什么音取决于<strong>后面的音</strong>（互补分布）；只需选<strong>最方便发后面那个音的口型</strong>即可：
+<ul>
+<li>さんま → 双唇鼻音；こんにちは → 前鼻音；ひんか → 后鼻音</li>
+<li>词尾（如「ほん」）→ <strong>小舌鼻音</strong>（最省力）</li>
+<li>后面是元音・半元音・摩擦音时 → 发<strong>鼻化元音</strong>（发元音时鼻子同时出气）</li>
+</ul>
+</li>
+<li><strong>拨音自成一拍</strong>。</li>
+</ul>
+<h3 id="促音っ"><a class="header" href="#促音っ">促音「っ」</a></h3>
+<ul>
+<li>停顿约<strong>一拍</strong>后再发后续音；停顿时自然用<strong>后续音的发音部位</strong>阻挡气流。</li>
+<li>若气流无法完全阻挡，会自然漏出后续音的辅音。</li>
+<li><strong>有无促音，意思完全不同</strong>。</li>
+</ul>
+<h2 id="九东京声调两条规律"><a class="header" href="#九东京声调两条规律">九、东京声调两条规律</a></h2>
+<ol>
+<li><strong>第一拍与第二拍声调不可能相同</strong>：第一拍高 → 第二拍必低；第一拍低 → 第二拍必高。</li>
+<li>声调分<strong>有声调核</strong>与<strong>无声调核</strong>：
+<ul>
+<li>声调核＝<strong>下降点</strong>；一个单词若有声调核，<strong>只可能有一处</strong>（降了就不会再升）。</li>
+<li>无声调核（<strong>0 号</strong>）：第一拍低，之后一直升高。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>日语是黏着语，单词后常带助词 → <strong>学声调必须把后面的助词一起算进去</strong>。</p>
+<div class="table-wrapper"><table><thead><tr><th>标记</th><th>含义</th><th>例</th></tr></thead><tbody>
+<tr><td><strong>0</strong></td><td>第一拍低，第二拍起升高，无下降</td><td>さくらが</td></tr>
+<tr><td><strong>1</strong></td><td>第一拍高，之后直接下降</td><td>ねこが</td></tr>
+<tr><td><strong>2</strong></td><td>第一拍低、第二拍高，第二拍后下降</td><td>—</td></tr>
+<tr><td>若 4 拍词标 <strong>4</strong></td><td>后续的助词下降</td><td>—</td></tr>
+</tbody></table>
+</div></li>
+<li>
+<p>构成<strong>复合词</strong>或后续助词时，声调<strong>可能变化</strong>。</p>
+</li>
+</ul>
+<h2 id="十语调イントネーション"><a class="header" href="#十语调イントネーション">十、语调（イントネーション）</a></h2>
+<ul>
+<li>表示<strong>疑问</strong> → 声调<strong>升高</strong></li>
+<li>表示<strong>确认</strong> → 声调<strong>下降</strong></li>
+</ul>
+<h2 id="十一元音清化無声化"><a class="header" href="#十一元音清化無声化">十一、元音清化（無声化）</a></h2>
+<ul>
+<li>元音 <strong>i／u 夹在两个清辅音之间</strong>时，可能发得很轻，甚至<strong>只发辅音不发元音</strong>。</li>
+<li>单词末尾・句末也有类似现象。</li>
+<li>但<strong>在声调核位置</strong>（要开始下降处）<strong>难以发生</strong>清化。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../onsei/02-onbin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../onsei/04-yomikata.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../onsei/02-onbin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../onsei/04-yomikata.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

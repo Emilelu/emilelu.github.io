@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>03. 谓语·态与体 - 日本語ノート</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="日语语法・词汇・写作笔记（源自 B站 日语翻译小昊子 系列视频整理）">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../bunpo/index-sec.html"><strong aria-hidden="true">2.</strong> 日语语法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bunpo/01-joshi.html"><strong aria-hidden="true">2.1.</strong> 01. 助词</a></li><li class="chapter-item expanded "><a href="../bunpo/02-meishi.html"><strong aria-hidden="true">2.2.</strong> 02. 名词与名词化</a></li><li class="chapter-item expanded "><a href="../bunpo/03-doushi.html"><strong aria-hidden="true">2.3.</strong> 03. 动词·授受·态</a></li><li class="chapter-item expanded "><a href="../bunpo/04-fukubun.html"><strong aria-hidden="true">2.4.</strong> 04. 复句与接续</a></li><li class="chapter-item expanded "><a href="../bunpo/05-joutai.html"><strong aria-hidden="true">2.5.</strong> 05. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/06-yobun.html"><strong aria-hidden="true">2.6.</strong> 06. 谓语结构·文体</a></li><li class="chapter-item expanded "><a href="../bunpo/07-taikei.html"><strong aria-hidden="true">2.7.</strong> 07. 语法体系总论</a></li></ol></li><li class="chapter-item expanded "><a href="../ywh/index-sec.html"><strong aria-hidden="true">3.</strong> 因为你会，所以你不会</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ywh/01-doushi.html"><strong aria-hidden="true">3.1.</strong> 01. 动词与词类</a></li><li class="chapter-item expanded "><a href="../ywh/02-joshi.html"><strong aria-hidden="true">3.2.</strong> 02. 助词</a></li><li class="chapter-item expanded "><a href="../ywh/03-youtai.html" class="active"><strong aria-hidden="true">3.3.</strong> 03. 谓语·态与体</a></li><li class="chapter-item expanded "><a href="../ywh/04-keishiki.html"><strong aria-hidden="true">3.4.</strong> 04. 形式名词</a></li><li class="chapter-item expanded "><a href="../ywh/05-fukubun.html"><strong aria-hidden="true">3.5.</strong> 05. 复句与接续</a></li><li class="chapter-item expanded "><a href="../ywh/06-joutai.html"><strong aria-hidden="true">3.6.</strong> 06. 情态·敬语·文体</a></li><li class="chapter-item expanded "><a href="../ywh/07-shiten.html"><strong aria-hidden="true">3.7.</strong> 07. 视点与日汉对比</a></li></ol></li><li class="chapter-item expanded "><a href="../sakubun/index-sec.html"><strong aria-hidden="true">4.</strong> 从零开始学写日语作文</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sakubun/01-kiso.html"><strong aria-hidden="true">4.1.</strong> 1. 基础</a></li><li class="chapter-item expanded "><a href="../sakubun/02-shinkyu.html"><strong aria-hidden="true">4.2.</strong> 2. 进阶</a></li><li class="chapter-item expanded "><a href="../sakubun/03-jissen.html"><strong aria-hidden="true">4.3.</strong> 3. 实践</a></li></ol></li><li class="chapter-item expanded "><a href="../kogo/index-sec.html"><strong aria-hidden="true">5.</strong> 古日语·日语史</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kogo/01-keitai.html"><strong aria-hidden="true">5.1.</strong> 01. 语法形态史</a></li><li class="chapter-item expanded "><a href="../kogo/02-goi.html"><strong aria-hidden="true">5.2.</strong> 02. 词汇与文字史</a></li></ol></li><li class="chapter-item expanded "><a href="../keiken/index-sec.html"><strong aria-hidden="true">6.</strong> 学习经验</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../keiken/01-gakushuukan.html"><strong aria-hidden="true">6.1.</strong> 01. 学习观与语法学习法</a></li><li class="chapter-item expanded "><a href="../keiken/02-goi.html"><strong aria-hidden="true">6.2.</strong> 02. 词汇·词源·文字</a></li></ol></li><li class="chapter-item expanded "><a href="../onsei/index-sec.html"><strong aria-hidden="true">7.</strong> 日语语音</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../onsei/01-chousei.html"><strong aria-hidden="true">7.1.</strong> 01. 声调</a></li><li class="chapter-item expanded "><a href="../onsei/02-onbin.html"><strong aria-hidden="true">7.2.</strong> 02. 语调与音便</a></li><li class="chapter-item expanded "><a href="../onsei/03-gojuuon.html"><strong aria-hidden="true">7.3.</strong> 03. 五十音与发音体系</a></li><li class="chapter-item expanded "><a href="../onsei/04-yomikata.html"><strong aria-hidden="true">7.4.</strong> 04. 读法与语感</a></li></ol></li><li class="chapter-item expanded "><a href="../honyaku/index-sec.html"><strong aria-hidden="true">8.</strong> 日语翻译</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../honyaku/01-honyakukan.html"><strong aria-hidden="true">8.1.</strong> 01. 翻译观</a></li></ol></li><li class="chapter-item expanded "><a href="../oyou/index-sec.html"><strong aria-hidden="true">9.</strong> 运用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oyou/01-kaiwa.html"><strong aria-hidden="true">9.1.</strong> 会話のコツ</a></li><li class="chapter-item expanded "><a href="../oyou/02-hatsuon.html"><strong aria-hidden="true">9.2.</strong> 发音技巧</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">日本語ノート</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Emilelu/emilelu.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="谓语态与体"><a class="header" href="#谓语态与体">谓语：态与体</a></h1>
+<blockquote>
+<p>返回 <a href="index-sec.html">00. 总索引</a>
+覆盖：谓语类型、动词四分类、态（被动・可能・使役・授受・自发）、体（ている）、时态（テンス）、反使役化。</p>
+</blockquote>
+<h2 id="谓语的类型-85"><a class="header" href="#谓语的类型-85">谓语的类型　#85</a></h2>
+<ul>
+<li><strong>动作</strong>（动词）：整个动态过程（开始-持续-结束），<strong>不能</strong>和"现在"的时间状语并用</li>
+<li><strong>状态</strong>（状态动词・形容词）：持续状态，无始终
+<ul>
+<li>例：続ける是动作动词 → 加ている转为状态，才能和"现在"的时间状语并用</li>
+</ul>
+</li>
+</ul>
+<h2 id="动词的四种类型-6"><a class="header" href="#动词的四种类型-6">动词的四种类型　#6</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>类型</th><th>例</th><th>ている 的含义</th></tr></thead><tbody>
+<tr><td>状態動詞</td><td>ある、いる</td><td>不可接ている（×あっている、いている）</td></tr>
+<tr><td>継続動詞</td><td>読む、降る</td><td>表动作/状态持续</td></tr>
+<tr><td>瞬間動詞</td><td>死ぬ、終わる</td><td>表结果存续</td></tr>
+<tr><td>第四種</td><td>優れる、似る</td><td>た连体修饰、ている作谓语</td></tr>
+</tbody></table>
+</div>
+<h2 id="ている"><a class="header" href="#ている">ている</a></h2>
+<h3 id="两种核心含义"><a class="header" href="#两种核心含义">两种核心含义</a></h3>
+<ul>
+<li>变成て形前：动词只能做肯定/否定/时态变化。</li>
+<li><strong>ている</strong>：①进行中动作 ②动作完成后的<strong>状态持续</strong></li>
+<li><strong>ていない</strong>：否定正在进行的状态 ＋ 否定动作结果的存留。</li>
+<li>状态持续例：自転車を<strong>持っている</strong>（拥有状态）　#59 → 建议别人买自行车：持っ<strong>ていた</strong>ほうがいい（强调"有的状态"才对）</li>
+</ul>
+<h2 id="自动词与他动词-28"><a class="header" href="#自动词与他动词-28">自动词与他动词　#28</a></h2>
+<ul>
+<li>自动词表<strong>状态</strong>（本身包含"可能"的含义）；非意志动词没有可能态</li>
+<li>否定自动词，仍表状态（例：閉まらない）</li>
+<li>他动词可以表<strong>责任／自责</strong></li>
+<li>感染する＝无意志的自动词；汚染する＝有意志的他动词</li>
+<li>无意志的词，<strong>直接被动和间接被动都不能用</strong>（如打雷等自然现象）</li>
+</ul>
+<h2 id="被动"><a class="header" href="#被动">被动</a></h2>
+<h3 id="间接被动-81"><a class="header" href="#间接被动-81">间接被动　#81</a></h3>
+<ul>
+<li>间接被动的动词需要有意志、表受害，但有特例：
+<ol>
+<li>雨に降られる　2. 雨に打たれる　3. 風に吹かれる　4. XXに死なれる</li>
+</ol>
+</li>
+<li>特例也要求<strong>主语是有意志的事物</strong>：×道路が雨に降られた。（主语没有意志，无法理解）</li>
+</ul>
+<h3 id="受け手立場動詞-112"><a class="header" href="#受け手立場動詞-112">受け手立場動詞　#112</a></h3>
+<ul>
+<li>捕まる这类类似中文"被"字句的动词：以<strong>动作接受者为主语</strong>、动作发出者为补语，称"受け手立場動詞"</li>
+<li>"被找到、得救了"用这类动词才自然；用自动词的被动形态会变成间接被动，意思偏离</li>
+</ul>
+<h3 id="被动与格关系直接被动用が间接被动用は-97"><a class="header" href="#被动与格关系直接被动用が间接被动用は-97">被动与格关系：直接被动用が，间接被动用は　#97</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>对比维度</th><th>直接被动句</th><th>间接被动句（受害被动）</th></tr></thead><tbody>
+<tr><td>例句</td><td>佐藤さん<strong>が</strong>田中さんに殴られた</td><td>佐藤さん<strong>は</strong>真夜中に赤ん坊に泣かれて、眠れなかった</td></tr>
+<tr><td>动词类型</td><td>2价他动词（施动者+受动者）</td><td>1价自动词（仅需施动者）</td></tr>
+<tr><td>主语角色</td><td>动作的直接承受者（有格关系）</td><td>间接受影响者（无格关系，只是话题）</td></tr>
+<tr><td>主动句还原</td><td>田中さんが佐藤さんを殴った</td><td>只能还原为赤ん坊が泣いた</td></tr>
+<tr><td>语感</td><td>客观陈述被动发生</td><td>强调主语受到负面影响</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>💡 ケーキ<strong>が</strong>弟に食べられた（蛋糕是食べる直接对象）vs 私は弟にケーキを食べられて、怒った（我不是对象，只是蛋糕被吃这件事影响了我）</li>
+</ul>
+<h3 id="常用的被动表达差异"><a class="header" href="#常用的被动表达差异">常用的被动表达差异</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>中文</th><th>日语</th><th>要点</th></tr></thead><tbody>
+<tr><td>被雨淋湿</td><td>雨に濡れる</td><td>濡れる是自动词，本身含"被淋湿"；雨に表动作来源</td></tr>
+<tr><td>被车撞到</td><td>車とぶつかる</td><td>ぶつかる是自动词，と表相撞</td></tr>
+<tr><td>被吓到</td><td>びっくりする</td><td>自动词，无需被动形</td></tr>
+<tr><td>被解雇</td><td>首になる</td><td>职场高频口语</td></tr>
+<tr><td>被误会</td><td>誤解がある</td><td>间接表达"存在误会"</td></tr>
+<tr><td>被取消</td><td>キャンセルになる／取り消しになる</td><td>〜になる＝变成被取消的状态</td></tr>
+</tbody></table>
+</div>
+<h3 id="汉语被动标记不止被-48"><a class="header" href="#汉语被动标记不止被-48">汉语被动标记不止"被"　#48</a></h3>
+<p>叫、让、由也可以表示被动：</p>
+<div class="table-wrapper"><table><thead><tr><th>中文原句</th><th>日语</th><th>要点</th></tr></thead><tbody>
+<tr><td>复印机<strong>叫</strong>人修好了</td><td>コピー機は修理された</td><td>直接被动，动作主体省略，突出结果</td></tr>
+<tr><td>不用的家具<strong>让</strong>工人搬出去了</td><td>不要な家具が労働者<strong>によって</strong>運び出された</td><td>によって明确动作执行者</td></tr>
+<tr><td>具体事宜<strong>将由</strong>刘副科长负责</td><td>具体的なことは劉副課長<strong>に任された</strong></td><td>"被委托给某人负责"，符合职场习惯</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>「由 A 代表的 B」→ <strong>Aに代表されるB</strong>（被动用法，修饰名词）：刺身に代表される日本の食生活／「チャットGPTに代表される生成AI」；句尾「と言われる」＝"被人们说、普遍认为"</li>
+<li>主动用法则是「A<strong>を代表する</strong>B」：21世紀<strong>を代表する</strong>会社を創る</li>
+</ul>
+<h2 id="使役请求"><a class="header" href="#使役请求">使役・请求</a></h2>
+<h3 id="自他动词与使役态-66"><a class="header" href="#自他动词与使役态-66">自他动词与使役态　#66</a></h3>
+<ul>
+<li>现代日语中，动词<strong>只有自动词没有对应他动词</strong>时，<strong>可将</strong>使役态充当他动词使用</li>
+<li><strong>有对应他动词</strong>时，<strong>不能</strong>将自动词的使役态充当他动词</li>
+<li>希望某人让自己做某事、对方也照做了 → 用授受 <strong>てもらった</strong></li>
+<li>闘志を高ぶらせた → 闘志を<strong>燃やした</strong>（替换后更自然）</li>
+<li>大学受験は<strong>合格させる</strong>ための試験ではなく、不合格に<strong>する</strong>ための試験である——语法没错但不自然
+<ul>
+<li>通す有11种意思（其一：使某人/物通过考试审查）；不合格にする也可用<strong>落とす</strong>（15种意思，其一：淘汰未达水准者）</li>
+<li>更简洁地道：大学受験は<strong>通す</strong>ための試験ではなく、<strong>落とす</strong>ための試験である</li>
+</ul>
+</li>
+<li>背单词一定要结合语境，以<strong>句子为单位</strong>学习和掌握每个单词的用法</li>
+</ul>
+<h3 id="常见错误他动词-vs-自动词的使役态-93"><a class="header" href="#常见错误他动词-vs-自动词的使役态-93">常见错误：他动词 vs 自动词的使役态　#93</a></h3>
+<p>混淆"他动词（给某人某事物）"和"自动词的使役态（让某人做某事）"：着せる／着させる；見せる／見させる</p>
+<ul>
+<li>私は娘に、自分で着物を<strong>着せた</strong>。（不考虑女儿的意志）</li>
+<li>私は娘に、自分で着物を<strong>着させた</strong>。（促使女儿自己做某个行为）</li>
+<li>宾语是无意志事物 → 一般与他动词一起使用；被使役者有意志且此意志不可被无视 → 用自动词的使役态</li>
+</ul>
+<h3 id="汉语的叫让请-25-75"><a class="header" href="#汉语的叫让请-25-75">汉语的"叫・让・请"　#25 #75</a></h3>
+<p>先判断是<strong>使役</strong>还是<strong>请求</strong>：</p>
+<ul>
+<li><strong>使役形（〜せる）</strong>：强制／完成</li>
+<li>叫：言いつけて〜させる</li>
+<li>让：その人の望みどおりにそうさせてあげる</li>
+<li>请：<strong>〜てもらう／〜ように言う／頼む</strong>（请求/依赖，不保证完成）</li>
+</ul>
+<h3 id="使役的时态日汉不对应"><a class="header" href="#使役的时态日汉不对应">使役的时态：日汉不对应</a></h3>
+<p>想让某人做某事包含两个阶段：①要求对方做 ②对方照做了</p>
+<ul>
+<li>我叫他提意见——汉语原句没有体现是否照做</li>
+<li>私は彼に意見を出させ<strong>た</strong>。（助动词た＝要求了<strong>且对方照办了</strong>）</li>
+<li>私は彼に意見を出す<strong>よう言った</strong>。（用形式名词よう才能对应原句：言った说明"要求"已完成，对方是否照做未知）</li>
+<li>よう（に）言う＝表示让对方做某事、对方还未照做的情况</li>
+</ul>
+<h2 id="可能态-22"><a class="header" href="#可能态-22">可能态　#22</a></h2>
+<h3 id="汉语的能的多种对应"><a class="header" href="#汉语的能的多种对应">汉语的"能"的多种对应</a></h3>
+<ul>
+<li>能力や条件が備わる → …できる</li>
+<li>表达擅长做某事 → …するのが上手である</li>
+<li>可能性 → …のはずだ</li>
+<li>人情や道理から許される → …できる</li>
+<li>状況や事情から許される → …してもよい</li>
+</ul>
+<h3 id="歧义"><a class="header" href="#歧义">歧义</a></h3>
+<ul>
+<li><strong>状态不能</strong>：消えない</li>
+<li><strong>禁止不能</strong>：消してはいけない</li>
+</ul>
+<h2 id="感情形容词与がる"><a class="header" href="#感情形容词与がる">感情形容词与がる</a></h2>
+<ul>
+<li>当句子中加入疑问、推测等情态表达，或在引用句中——只要不属于<strong>断定</strong>语气，第三人称不加がる的情况也比比皆是。</li>
+</ul>
+<h2 id="授受"><a class="header" href="#授受">授受</a></h2>
+<h3 id="てあげる-vs-をあげる-10"><a class="header" href="#てあげる-vs-をあげる-10">てあげる vs をあげる　#10</a></h3>
+<ul>
+<li>て<strong>あげる</strong>：施惠；…<strong>をあげる</strong>：所有权转移</li>
+<li>貸す场景不可用あげる，用<strong>渡す</strong></li>
+<li>关注视点/相貌：过程或结果用**〜ている**；只述动作不用「て」</li>
+<li>授受动词影响论元：动词和**〜てくれる<strong>等授受动词搭配时，间接宾语「私に」可以省略，某些情况下</strong>必须省略**：田中さんが歌を<strong>教えてくれた</strong>。</li>
+</ul>
+<h2 id="自发-16"><a class="header" href="#自发-16">自发　#16</a></h2>
+<ul>
+<li>助动词「れる」表示无意志自发：
+<ul>
+<li>私はあの日の情景を思い出した。（有意志）</li>
+<li>私<strong>に</strong>はあの日の情景<strong>が</strong>思い出された。（不由得想起）</li>
+</ul>
+</li>
+<li>自发句：动作对象变主语；执行者若出现，用「に」表示</li>
+</ul>
+<h2 id="ようとする-13"><a class="header" href="#ようとする-13">ようとする　#13</a></h2>
+<ul>
+<li>表达<strong>状态</strong>，只能用在第三人称（意志只能用在第一人称）：
+<ul>
+<li>図書館で勉強<strong>しようとしました</strong>が、休みでした。（正要学习的状态，不是准备学习的意志）</li>
+<li>花が散ろ<strong>うとしています</strong>。（非意志动词，表达马上要散的状态）</li>
+</ul>
+</li>
+<li>✗私はタバコをやめようとしません。（第一人称有意志的行为不能用とする → 改：つもりはない／ことにした）</li>
+<li>○父はタバコをやめようとしません。（第三人称＝状态，可以用）</li>
+</ul>
+<h2 id="テンス时态"><a class="header" href="#テンス时态">テンス（时态）</a></h2>
+<h3 id="时态标记的移动-28"><a class="header" href="#时态标记的移动-28">时态标记的移动　#28</a></h3>
+<ul>
+<li>例：把车撞到了护栏上（过去），非常抱歉（现在）→ 車をガードレールにぶつけてしまって、大変申し訳ございまし<strong>た</strong>。</li>
+<li>助动词た后面必须结句，因此只能通过接续助词て连接两个小句，<strong>把た移向句末</strong>。</li>
+</ul>
+<h3 id="時態と視点-63"><a class="header" href="#時態と視点-63">時態と視点　#63</a></h3>
+<ul>
+<li><strong>日语时态中心＝事态，视点可动</strong>；英语用一个固定时间轴将事态分布。</li>
+<li>「た」不一定＝过去，也可表示假设、将来、进行：
+<ul>
+<li>现在时表一般习惯：僕はテニスをします。</li>
+<li>将来仍用现在时：僕はテニスをしまーす！</li>
+<li>描述过去也可不用た：あの太陽が照り付けていた夏の日、僕らはそれでもテニスをする。</li>
+</ul>
+</li>
+<li>从句时态以"知道的时点"为准：
+<ul>
+<li>彼が東京に<strong>いる</strong>のを知っていた。＝I knew that he <strong>was</strong> in Tokyo.</li>
+<li>强调过去 → 彼が東京に<strong>いた</strong>のを知っていた。＝I knew that he <strong>had been</strong> in Tokyo.</li>
+</ul>
+</li>
+<li>入院<strong>している</strong>友達の見舞いに行ってきた。（探望只能发生在住院期间内 → している）</li>
+<li>强调住院发生在过去 → 入院<strong>していた</strong>：以前入院していた病院に再入院した。</li>
+</ul>
+<h3 id="た-的多种用法"><a class="header" href="#た-的多种用法">た 的多种用法</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>例句</th><th>用法</th></tr></thead><tbody>
+<tr><td>昨日大阪に着いた！</td><td>最一般的用法</td></tr>
+<tr><td>よーし！いよいよ大阪に着いたぞー！</td><td>将来要发生</td></tr>
+<tr><td>大阪に着いたら、連絡するね。</td><td>た＋ら表假定</td></tr>
+<tr><td>あっ！新幹線来たよ！</td><td>正在进行</td></tr>
+<tr><td>ちょっと待った！</td><td>命令</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>日语在时态上有模糊性，需要多读多看培养语感。</li>
+<li>需要强调事情发展的阶段时，用形式名词<strong>ところ</strong>：Tom had been reading a book for an hour when I came home. → 私が帰ったとき、トムは1時間前からずっと読書をしていた<strong>ところ</strong>でした。</li>
+</ul>
+<h3 id="助动词た-8"><a class="header" href="#助动词た-8">助动词「た」　#8</a></h3>
+<ul>
+<li>无连用形，不能接「て」</li>
+<li>功能：过去／发现／再認識（只能用在静态谓语）</li>
+</ul>
+<h2 id="反使役化与脱使役化-104"><a class="header" href="#反使役化与脱使役化-104">反使役化与脱使役化　#104</a></h2>
+<h3 id="核心案例約束が破れる-vs-紙が破れた"><a class="header" href="#核心案例約束が破れる-vs-紙が破れた">核心案例：「約束が破れる」 vs 「紙が破れた」</a></h3>
+<ul>
+<li><strong>紙が破れた</strong>（纸破了）：自然——不一定需要人的主观意图（挂到东西扯破、自然裂开、老化）</li>
+<li><strong>約束が破れた</strong>（约定破灭）：日常表达不自然——"约定"不遵守的背后通常<strong>有人主动违背</strong>（有意志性参与）</li>
+<li>→ 应使用他动词被动：<strong>約束が破られた</strong></li>
+<li>深层机理：区别在于"事件背后是否容易让人联想到<strong>人的意志性行为</strong>"</li>
+</ul>
+<h3 id="两个语言学概念"><a class="header" href="#两个语言学概念">两个语言学概念</a></h3>
+<ul>
+<li><strong>反使役化（Anticausative）</strong>：将本属于他动词（需要动作主体的事件）的过程，表现为自动词式的状态变化。关键：宾语（受事）是否容易被视作状态变化的主体。</li>
+<li><strong>脱使役化（Decausative）</strong>：动作主体不特定、或无需刻意提及时，日语常隐去主体只叙述结果。典型：<strong>予算案が決まった</strong>——"决定"必有执行者，但此表达非常自然，侧重结果的呈现。</li>
+</ul>
+<h3 id="跨语言对比"><a class="header" href="#跨语言对比">跨语言对比</a></h3>
+<ul>
+<li>日语：倾向用被动语态从事件的"结果侧面"叙述，动作主体不轻易显露（約束が破られた）</li>
+<li>汉语：习惯<strong>以实际违约的人为主语</strong>，或用「失约」等惯用词自然传达</li>
+<li>英语：无法直接对等直译，按语境用被动或明确主体的表达（The budget was approved.）</li>
+<li>翻译原则：切忌生搬硬套语态，需顺应目标语言的主语习惯与惯用表达</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ywh/02-joshi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ywh/04-keishiki.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ywh/02-joshi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ywh/04-keishiki.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../lunr.min.js"></script>
+<script src="../cjk-tokenizer.js"></script>
+<script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
