@@ -258,40 +258,6 @@ window.search = window.search || {};
     // 这里用 lunr + CJK 二元分词在前端重建索引；失败则回退默认搜索。
     var cjkIndex = null;
     var cjkDocs = {};
-    var cjkDocs = {};
-
-    function buildCJKIndex(docs) {
-        if (typeof lunr === 'undefined' || typeof cjkTokenizer === 'undefined') { return null; }
-        var tokenize = cjkTokenizer;
-        return lunr(function () {
-            this.tokenizer = function (obj, md) {
-                var str = (obj == null) ? '' : obj.toString();
-                return tokenize(str).map(function (t, i) {
-                    return new lunr.Token(t, Object.assign({}, md || {}, { position: [i, 1] }));
-                });
-            };
-            // lunr 默认 trimmer 会删掉非字母数字字符（中文/日语会被清空）
-            if (lunr.trimmer) {
-                this.pipeline.remove(lunr.trimmer);
-                this.searchPipeline.remove(lunr.trimmer);
-            }
-            this.ref('id');
-            this.field('title', { boost: 3 });
-            this.field('body');
-            for (var k in docs) { if (docs.hasOwnProperty(k)) { this.add(docs[k]); } }
-        });
-    }
-
-    function cjkQuery(searchterm) {
-        if (typeof cjkTokenizer === 'undefined') { return searchterm; }
-        return cjkTokenizer(searchterm).join(' ');
-    }
-
-
-    // ===== CJK 搜索支持（注入）=====
-    // mdbook 默认用 elasticlunr 的英文分词，中文/日语无法检索。
-    // 这里用 lunr + CJK 二元分词在前端重建索引；失败则回退默认搜索。
-    var cjkIndex = null;
 
     function buildCJKIndex(docs) {
         if (typeof lunr === 'undefined' || typeof cjkTokenizer === 'undefined') { return null; }
@@ -326,12 +292,6 @@ window.search = window.search || {};
         searchbar_outer = config.searchbar_outer;
         doc_urls = config.doc_urls;
         searchindex = elasticlunr.Index.load(config.index);
-        // 注入：构建 CJK 索引
-        try {
-            var _docs = (config.index && config.index.documentStore && config.index.documentStore.docs) || {};
-            cjkIndex = buildCJKIndex(_docs);
-            cjkDocs = _docs;
-        } catch (e) { cjkIndex = null; }
         // 注入：构建 CJK 索引
         try {
             var _docs = (config.index && config.index.documentStore && config.index.documentStore.docs) || {};
